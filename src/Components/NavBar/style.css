@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    background-color:#1B4289;
+}
+
+.Logo{
+    width:60px;
+    height:60px;
+    padding-left: 50px;
+}
+
+
+
+.MuiBox-root{
+    justify-content: center;
+    gap:40px;
+
+}
