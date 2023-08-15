@@ -1,5 +1,4 @@
-// import React ,{useEffect} from 'react';
-import React from 'react';
+import React,{useEffect,useState }  from 'react';
 import heroImage from '../../Utilis/images/hero-img.png'
 import Typography from '@mui/material/Typography';
 import '@fontsource/roboto/500.css';
@@ -7,10 +6,27 @@ import SearchIcon from '@mui/icons-material/Search';
 import './style.css';
 
 
-// import { CardContainer } from '../../Components';
+import { CardContainer } from '../../Components';
 
 const Landing = ()=>{
- 
+  // Fetch IP
+  const [houses, setHouse] = useState([]);
+  useEffect(() => {
+    fetch("https://my-json-server.typicode.com/alaa-jamal/houseapi/houses")
+      .then((response) => response.json())
+      .then((data) => {
+        // console.log(houses.length);
+      //  const a= houses.filter((houses)=>{
+      //     houses.length=3;
+      //   });
+
+        
+        setHouse(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
 
     return(
         <>
@@ -45,14 +61,26 @@ const Landing = ()=>{
 
         </section>
         <section className="newest-houses">
-        <Typography className="" variant="h3" component="h3">
+        <section className='new'>
+        <Typography className="newest-houses-title" variant="h4" component="h4">
              Newest Houses
             </Typography>
+
+      
+             <section className="card-conatiner">
+              
+             <CardContainer houses={houses}/>
+
+             </section>
+             
+            
+        </section>
+        
 
 
         </section>
         
-        {/* <CardContainer houses={houses}/> */}
+       
 
         </>
     )

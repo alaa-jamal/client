@@ -5,15 +5,18 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import './style.css';
 
 export default function HouseCard({house}) {
-    const {title,description}=house;
+    const {title,description,image}=house;
+
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <section>
+      <Card className="house-card" sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
-        title="green iguana"
+        image={image}
+        title={title}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
@@ -27,5 +30,9 @@ export default function HouseCard({house}) {
         <Button size="small"> More Details</Button>
       </CardActions>
     </Card>
+
+    </section>
+
+    
   );
 }

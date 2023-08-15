@@ -1,16 +1,18 @@
 
 import React from 'react';
-import {HouseCard, NavBar} from '../Components';
+import {HouseCard, NavBar,Footer} from '../Components';
 
-import {Layout, Landing} from '../Pages';
+import {Layout, Landing, AboutUs} from '../Pages';
 
 
 function App() {
   return (
-    <div>
-      <NavBar/>
+    <Layout>
+      
       <Landing/>
-    </div>
+      {/* <AboutUs/> */}
+      
+    </Layout>
     
     
   );

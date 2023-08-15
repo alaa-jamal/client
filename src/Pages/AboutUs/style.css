@@ -1,0 +1,17 @@
+.about-section{
+    display: flex;
+    
+}
+
+.about-section-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-section-right img{
+    width:300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

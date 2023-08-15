@@ -75,6 +75,40 @@
     position:relative;
 }
 
+/* Newest Section */
+.newest-houses{
+    background-color:#FBFBFB;
+    height:300px;
+    position:relative;
+
+}
+.newest-houses-title{
+    padding:20px 0px 0px 100px;
+    color:#1B4289;
+    
+}
+.new{
+    position: relative
+}
+.newest-houses-title::before{
+    content: " ";
+    position: absolute;
+    top: 62px;
+    left: 103px;
+    width: 123px;
+    height: 3px;
+    color: #FED047;
+    background-color: #FED047;
+}
+
+.card-conatiner{
+    display: flex;
+    flex-wrap: wrap;
+    gap:3px;
+    justify-content: space-around;
+    
+}
+
 
 
 
