@@ -8,17 +8,18 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <Layout>
-      {/* <Router>
+      <Router>
         <Routes>
           <Route path="/" element={<Landing/>}/>
           <Route path="/aboutus" element={<AboutUs/>}/>
+          <Route path ="/details" element ={<Details/>}/>
           <Route path ="*" element={<NotFound/>}/>
         </Routes>
    
 
-      </Router> */}
+      </Router>
 
-      <Landing/>
+      {/* <Landing/> */}
       {/* <Details/> */}
      
       

@@ -27,6 +27,7 @@ const Landing = ()=>{
   }, []);
 
   // Display newest House 
+   
   
 
 

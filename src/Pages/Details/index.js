@@ -4,28 +4,15 @@ import Typography from '@mui/material/Typography';
 import PersonIcon from '@mui/icons-material/Person';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
+import { useParams } from 'react-router-dom';
 import './style.css';
 
 const Details =()=>{
 
-    // Fetch user data
-    //1) initial value
-  const [owner, setOwner] = useState([]);
-  // const [newHouses,setNewHouse]=useState([]);
-  //2) Use Effect
-//   useEffect(() => {
-//     fetch("https://my-json-server.typicode.com/alaa-jamal/houseapi/users")
-//       .then((response) => response.json())
-//       .then((data) => {
-//         setOwner(data);
-//       })
-//       .catch((error) => {
-//         console.error("Error fetching data:", error);
-//       });
-//   },[]);
-//   console.log(owner);
-  
-//    const {username,email,phone}=owner;
+    let { id } = useParams();
+
+    
+ 
     return (
         <>
         <section className='details-section'>
@@ -58,19 +45,19 @@ const Details =()=>{
             <section className='contact-details'>
             <section className='contact-owner'>
             <PersonIcon className='contact-icon'/><Typography Typography className='contact-text'  variant="p" component="p">
-                 {username}
+                 Alaa Jamal
             </Typography>
             </section>
 
           <section className='contact-owner'>
           <EmailIcon className='contact-icon'/><Typography className='contact-text'  variant="span" component="span">
-                 {owner.email}
+                 alaa99702@gmail.com
             </Typography>
           </section>
 
           <section className='contact-owner'>
           <PhoneEnabledIcon className='contact-icon'/><Typography Typography className='contact-text'  variant="span" component="span">
-                {owner.phone}
+                0592813281
             </Typography>
           </section>
 

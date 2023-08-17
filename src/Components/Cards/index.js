@@ -9,11 +9,11 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import HotelIcon from '@mui/icons-material/Hotel';
 import BathtubIcon from '@mui/icons-material/Bathtub';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-// import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import './style.css';
 
 export default function HouseCard({house}) {
-    const {title,description,image,bathroom,bedroom,price,city}=house;
+    const {title,description,image,bathroom,bedroom,price,city,id}=house;
 
   return (
     <section>
@@ -32,7 +32,7 @@ export default function HouseCard({house}) {
       <CardContent class="card-content">
         <section class="card-content-top">
         <Typography class="card-title" gutterBottom variant="h2" component="h2">
-        {title}
+        {title.split('').slice(0,16).join('')}
         </Typography>
         <Typography class="card-price" gutterBottom variant="h2" component="h2">
         {price}$
@@ -70,7 +70,7 @@ export default function HouseCard({house}) {
       </section>
       
       <CardActions>
-        <Button class="seeDetails-btn" size="small">See Details </Button>
+        <Button class="seeDetails-btn" size="small"><Link to ="/details">see details</Link></Button>
       </CardActions>
     </Card>
 
