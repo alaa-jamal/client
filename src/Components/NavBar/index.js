@@ -11,7 +11,8 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import image from '../../Utilis/images/logo.png'
+import image from '../../Utilis/images/logo.png';
+import '@fontsource/roboto/400.css';
 import "./style.css";
 
 const pages = ['Houses', 'About us'];
@@ -125,6 +126,13 @@ function NavBar() {
               </Button>
             ))}
           </Box>
+         <section className="header-right">
+         <button className="login-btn">Login</button>
+         <button className="signup-btn">SignUp</button>
+   
+
+         </section>
+
 
           {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">

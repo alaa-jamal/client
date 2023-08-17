@@ -47,7 +47,6 @@
 }
 
 .hero-searchInput{
-    /* position:relative; */
     margin-top: 20px;
     width:30vw;
     padding: 10px;
@@ -69,21 +68,21 @@
    
     color:#1B4289;
 }
-
-
 .searchhh{
     position:relative;
 }
 
+
+
 /* Newest Section */
 .newest-houses{
     background-color:#FBFBFB;
-    height:300px;
+    height:370vh;
     position:relative;
 
 }
 .newest-houses-title{
-    padding:20px 0px 0px 100px;
+    padding:50px 0px 100px 100px;
     color:#1B4289;
     
 }
@@ -93,8 +92,8 @@
 .newest-houses-title::before{
     content: " ";
     position: absolute;
-    top: 62px;
-    left: 103px;
+    top: 94px;
+    left: 100px;
     width: 123px;
     height: 3px;
     color: #FED047;
@@ -106,7 +105,7 @@
     flex-wrap: wrap;
     gap:3px;
     justify-content: space-around;
-    
+    padding:0px 80px;  
 }
 
 

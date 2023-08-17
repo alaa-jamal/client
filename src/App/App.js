@@ -1,16 +1,28 @@
 
 import React from 'react';
-import {HouseCard, NavBar,Footer} from '../Components';
+import {Layout, Landing,Details,AboutUs, NotFound} from '../Pages';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import {Layout, Landing, AboutUs} from '../Pages';
 
 
 function App() {
   return (
     <Layout>
-      
+      {/* <Router>
+        <Routes>
+          <Route path="/" element={<Landing/>}/>
+          <Route path="/aboutus" element={<AboutUs/>}/>
+          <Route path ="*" element={<NotFound/>}/>
+        </Routes>
+   
+
+      </Router> */}
+
       <Landing/>
-      {/* <AboutUs/> */}
+      {/* <Details/> */}
+     
+      
+    
       
     </Layout>
     
