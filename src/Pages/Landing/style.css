@@ -1,113 +1,99 @@
 :root {
-    --primary-color:#1B4289;
-    --secondary-color:#FED047;
-    --text-color:#626687;
-  }
-
-  /* hero section */
-
-.hero-section{
-    display: flex;
-    height:100vh;
-    
-  }
-
-  .hero-content{
-   
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding-left: 6rem;
-    line-height: 2rem;
-  }
-
-.hero-title1{
-    color: var(--primary-color);
-    font-weight: bolder;
-}
-.hero-title2{
-    color:var(--secondary-color);
+  --primary-color: #1b4289;
+  --secondary-color: #fed047;
+  --text-color: #626687;
 }
 
-.hero-subtitle{
-    font-size: 18px;
-    padding-top: 20px;
-    color:var(--text-color);
+/* hero section */
+
+.hero-section {
+  display: flex;
+  height: 100vh;
 }
 
-.hero-img{
-   
-    padding-top: 6rem;
-
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 6rem;
+  line-height: 2rem;
 }
 
-.hero-img img{
-    width:37vw;
+.hero-title1 {
+  color: var(--primary-color);
+  font-weight: bolder;
+}
+.hero-title2 {
+  color: var(--secondary-color);
 }
 
-.hero-searchInput{
-    margin-top: 20px;
-    width:30vw;
-    padding: 10px;
-    border-radius: 50px;
-    border:2px solid #1b4189a0;   
+.hero-subtitle {
+  font-size: 18px;
+  padding-top: 20px;
+  color: var(--text-color);
 }
 
-.serach-btn{
-    position: absolute;
-    border: none;
-    height: 35px;
-    left:372px;
-    top: 22px;
-    border-radius: 50px;
-    background-color: var(--secondary-color);
-
-}
-.searchicon{
-   
-    color:#1B4289;
-}
-.searchhh{
-    position:relative;
+.hero-img {
+  padding-top: 6rem;
 }
 
+.hero-img img {
+  width: 37vw;
+}
 
+.hero-searchInput {
+  margin-top: 20px;
+  width: 30vw;
+  padding: 10px;
+  border-radius: 50px;
+  border: 2px solid #1b4189a0;
+}
+
+.serach-btn {
+  position: absolute;
+  border: none;
+  height: 35px;
+  left: 372px;
+  top: 22px;
+  border-radius: 50px;
+  background-color: var(--secondary-color);
+}
+.searchicon {
+  color: #1b4289;
+}
+.searchhh {
+  position: relative;
+}
 
 /* Newest Section */
-.newest-houses{
-    background-color:#FBFBFB;
-    height:370vh;
-    position:relative;
-
+.newest-houses {
+  background-color: #fbfbfb;
+  height: 370vh;
+  position: relative;
 }
-.newest-houses-title{
-    padding:50px 0px 100px 100px;
-    color:#1B4289;
-    
+.newest-houses-title {
+  padding: 50px 0px 100px 100px;
+  color: #1b4289;
 }
-.new{
-    position: relative
+.new {
+  position: relative;
 }
-.newest-houses-title::before{
-    content: " ";
-    position: absolute;
-    top: 94px;
-    left: 100px;
-    width: 123px;
-    height: 3px;
-    color: #FED047;
-    background-color: #FED047;
+.newest-houses-title::before {
+  content: " ";
+  position: absolute;
+  top: 94px;
+  left: 100px;
+  width: 123px;
+  height: 3px;
+  color: #fed047;
+  background-color: #fed047;
 }
 
-.card-conatiner{
-    display: flex;
-    flex-wrap: wrap;
-    gap:3px;
-    justify-content: space-around;
-    padding:0px 80px;  
+.card-conatiner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  justify-content: space-around;
+  padding: 0px 80px;
 }
-
-
-
-

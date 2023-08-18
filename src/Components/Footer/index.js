@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-// import{Link} from 'react-router-dom';
+import{Link} from 'react-router-dom';
 
 
 import "./style.css";
@@ -34,12 +34,12 @@ const Footer =()=>{
                 
 
                 <Typography variant="p" component="p">
-                 {/* <Link to="aboutus">Houses</Link> */}
-                 Houses
+                 {/* <Link to="/">Houses</Link> */}
+                 
                 </Typography>
 
                 <Typography variant="p" component="p">
-                 About Us
+                 {/* <Link to ="/aboutus">About us</Link> */}
                 </Typography>
                 
             </section>

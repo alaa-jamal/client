@@ -38,7 +38,7 @@ export default function HouseCard({house}) {
         {price}$
         </Typography>
         </section>
-        <Typography variant="body2" color="text.secondary" className="card-description">
+        <Typography variant="body2" color="text.secondary" class='card-description'>
          {description.split('').slice(0,70).join('')}
          
         </Typography>
@@ -70,7 +70,10 @@ export default function HouseCard({house}) {
       </section>
       
       <CardActions>
-        <Button class="seeDetails-btn" size="small"><Link to ="/details">see details</Link></Button>
+        <Button class="seeDetails-btn" size="small">
+          <Link className = "seeDetails-btn-link" to ={`/details/${id}`}>see details</Link>
+          </Button>
+        
       </CardActions>
     </Card>
 

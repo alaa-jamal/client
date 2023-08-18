@@ -48,19 +48,11 @@
     color:#1B4289;
     
 }
-.seeDetails-btn{
 
-    background-color: #FED047;
-    border:none;
-    border-radius: 50px;
-    color:#04266D;
-    padding:10px 19px;
-    margin: 0px auto 15px auto;   
-}
 
 .card-description{
-    padding:2px 35px;
-    font-size:0.7rem;
+    padding:1px 35px;
+    font-size:0.8rem;
     color:#646464;
     text-align: left;
    
@@ -72,11 +64,26 @@
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 20px;
-
 }
 
 .icon{
     color:#1B4289;
     margin-top: 20px;
+}
+
+.seeDetails-btn{
+
+    background-color: #FED047;
+    border:none;
+    border-radius: 50px;
+    color:#04266D;
+    padding:10px 19px;
+    margin: 0px auto 15px auto;  
+    text-decoration: none; 
+}
+
+.seeDetails-btn-link{
+    text-decoration: none;
+    color:#1B4289;
 }
 
