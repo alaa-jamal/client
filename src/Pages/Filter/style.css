@@ -39,13 +39,17 @@
 }
 
 .filter-section-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 80%;
     height: 122px;
-    background-color: #e8e5e5;
+    background-color: #FFFFFF;
     border-radius: 5px;
     position: absolute;
     bottom: -49px;
     left: 133px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
    
 }
 
