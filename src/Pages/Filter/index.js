@@ -63,7 +63,8 @@ const Filter = () => {
   // }
   // const filterCategory = [location,type]
 
-  const handleFilter = () => {
+  const handleFilter = (event) => {
+    event.preventDefault();
     const filterResult = houses.filter((house) => {
       return house.city === location;
     });
