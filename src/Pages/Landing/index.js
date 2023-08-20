@@ -3,7 +3,8 @@ import heroImage from "../../Utilis/images/hero-img.png";
 import Typography from "@mui/material/Typography";
 import "@fontsource/roboto/500.css";
 import SearchIcon from "@mui/icons-material/Search";
-import { CardContainer } from "../../Components";
+import { CardContainer, HouseCard } from "../../Components";
+import {Link} from 'react-router-dom';
 import "./style.css";
 
 const Landing = () => {
@@ -47,7 +48,8 @@ const Landing = () => {
               placeholder="Search for the location you want!"
             />
             <button className="serach-btn">
-              <SearchIcon className="searchicon"></SearchIcon>
+              <Link to ="/filter"><SearchIcon className="searchicon"></SearchIcon></Link>
+              
             </button>
           </form>
         </section>
@@ -68,7 +70,16 @@ const Landing = () => {
           </Typography>
 
           <section className="card-conatiner">
-            <CardContainer houses={houses} />
+            {/* <CardContainer houses={houses} /> */}
+            {houses && houses.length > 0 ? (
+        houses.slice(0, 6).map((house) => (
+          <HouseCard house={house} />
+        ))
+      ) : (
+        <p>Loading</p>
+      )}
+  
+            
           </section>
         </section>
       </section>
@@ -76,3 +87,5 @@ const Landing = () => {
   );
 };
 export default Landing;
+
+        
