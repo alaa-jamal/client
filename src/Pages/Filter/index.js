@@ -4,8 +4,11 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import { CardContainer } from "../../Components";
-// import { Stack, Typography, Slider, TextField } from "@mui/material";
+import TextField from "@mui/material/TextField";
+ import Slider from "@mui/material/Slider"
 import Select, { SelectChangeEvent } from "@mui/material/Select";
+import Typography from "@mui/material/Typography";
+import Container from '@mui/material/Container';
 
 import "./style.css";
 
@@ -15,6 +18,9 @@ const Filter = () => {
   const [location, setLocation] = useState("");
   const [type, setType] = useState("");
   const [room, setRoom] = useState(0);
+  const minPrice = 100;
+  const maxPrice = 450;
+  const [price, setPrice] = useState();
   const [filter, setFilter] = useState([]);
 
   //  handel fun for controlled input
@@ -29,6 +35,12 @@ const Filter = () => {
   const handleChangeRoom = (event) => {
     setRoom(event.target.value);
   };
+
+  const handleChangePrice = (event, newValue) => {
+    setPrice(newValue);
+  };
+
+  
 
   // Fetch all houses from API
   useEffect(() => {
@@ -66,7 +78,27 @@ const Filter = () => {
   const handleFilter = (event) => {
     event.preventDefault();
     const filterResult = houses.filter((house) => {
-      return house.city === location;
+      return ((house.city === location)||
+             (house.bedroom === +room) ||
+             (house.price === price))
+      
+  
+           
+      
+
+      // return(
+
+      //   // ((house.city === location) ||(house.bedroom === +room)||(house.price === price))||
+      //   // ((house.city === location) &&(house.bedroom === +room))
+
+
+
+
+
+      // )
+            
+            //  (house.city ===location && house.bedroom===room)
+            //  ;
     });
 
     setFilter(filterResult);
@@ -82,6 +114,7 @@ const Filter = () => {
             className="filter-searchInput"
             type="search"
             placeholder="Search for the location you want!"
+            onChange={handleChangeLocation}
           />
           <button className="filter-serach-btn" onClick={handleFilter}>
             Search
@@ -117,7 +150,7 @@ const Filter = () => {
             </Select>
           </FormControl>
 
-          <FormControl sx={{ m: 1, minWidth: 120 }}>
+          {/* <FormControl sx={{ m: 1, minWidth: 120 }}>
             <InputLabel id="demo-simple-select-autowidth-label">For</InputLabel>
             <Select
               labelId="demo-simple-select-autowidth-label"
@@ -130,9 +163,17 @@ const Filter = () => {
               <MenuItem value={"Rent"}>Rent</MenuItem>
               <MenuItem value={"Sale"}>Sale</MenuItem>
             </Select>
-          </FormControl>
+          </FormControl> */}
+          <TextField 
+            id="outlined-Bedroom-input"
+            label="Room"
+            type="number"
+            sx={{ width: "120px" }}
+            value={room}
+            onChange={handleChangeRoom}
+          />
 
-          <FormControl sx={{ m: 1, minWidth: 120 }}>
+           <FormControl sx={{ m: 1, minWidth: 120 }}>
             <InputLabel id="demo-simple-select-autowidth-label">
               Room
             </InputLabel>
@@ -151,9 +192,40 @@ const Filter = () => {
               <MenuItem value={5}>5</MenuItem>
             </Select>
           </FormControl>
-          {/* 
+
+
+          <section>
+            <Typography
+            variant="span"
+            component="span"
+            color="#888B97"
+            textAlign="center"
+            
+            
+            >Price</Typography>
+            <Slider
+              aria-label="Small"
+              name="price"
+              value={price}
+              valueLabelDisplay="auto"
+              aria-labelledby="range-slider"
+             
+              min={minPrice}
+              max={maxPrice}
+              variant="outlined"
+              style={{ width: "300%" }}
+              
+              
+              onChange={handleChangePrice}
+            />
+          </section>
+
+
+
+
+{/*           
       { type==="Rent"? console.log("hi"):console.log("error")}
-      { location==="Gaza"? console.log("hiGaza"):console.log("notfound")} */}
+      { location==="Gaza"? console.log("hiGaza"):console.log("notfound")} */} 
 
           {/* <Slider
             getAriaLabel={() => "Price range"}
@@ -166,10 +238,25 @@ const Filter = () => {
           /> */}
         </section>
       </section>
-
-      <section className="data-filter-section">
-        <CardContainer houses={filter} />
+     
+     <Container  className="container-filter">
+     <Typography
+          variant="h5"
+          component="h4"
+          color="#1B4289"
+          textAlign="center"
+        >
+          <span className="numOfHouse"> {filter.length} </span>
+           Houses Available
+        </Typography>
+  
+     <section className="data-filter-section">
+    
+     
+        <CardContainer className='filter-container' houses={filter} />
       </section>
+     </Container>
+     
     </>
   );
 };

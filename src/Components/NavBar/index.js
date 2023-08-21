@@ -119,6 +119,7 @@ function NavBar() {
             {pages.map((page) => (
               <Button
                 key={page}
+                href="aboutus"
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
