@@ -34,3 +34,9 @@
     justify-content: center;
     gap:10px;
 }
+
+.footer-links{
+    color:#FFFFFF;
+    text-decoration: none;
+    font-size:0.8rem;
+}

@@ -48,19 +48,19 @@ export default function HouseCard({house}) {
 
         <section className="bed-icon">
         <HotelIcon className="icon"/>
-          <Typography variant="p" component="p">
+          <Typography variant="p" component="p" color="#646464" fontSize="0.8rem">
             {bedroom}beds
           </Typography>
         </section>
         <section className="bath-icon">
         <BathtubIcon className="icon"/>
-          <Typography variant="p" component="p">
+          <Typography variant="p" component="p" color="#646464" fontSize="0.8rem">
             {bathroom}Baths
           </Typography>
         </section>
         <section className="location-icon">
         <LocationOnIcon className="icon"/>
-          <Typography variant="p" component="p">
+          <Typography variant="p" component="p" color="#646464" fontSize="0.8rem">
             {city}
           </Typography>
         </section>

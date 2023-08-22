@@ -30,7 +30,7 @@ const Landing = () => {
     <>
       <section className="hero-section">
         <section className="hero-content">
-          <Typography className="hero-title1" variant="h1" component="h2">
+          <Typography className="hero-title1" variant="h2" component="h2">
             Find Your
           </Typography>
           <Typography className="hero-title2" variant="h2" component="h2">
@@ -70,14 +70,16 @@ const Landing = () => {
           </Typography>
 
           <section className="card-conatiner">
+        
+            {/* <CardContainer house={house} /> */}
             {/* <CardContainer houses={houses} /> */}
-            {houses && houses.length > 0 ? (
+            { houses && houses.length > 0 ? ( 
         houses.slice(0, 6).map((house) => (
           <HouseCard house={house} />
         ))
       ) : (
         <p>Loading</p>
-      )}
+      )} 
   
             
           </section>

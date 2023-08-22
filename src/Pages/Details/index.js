@@ -47,7 +47,7 @@ const Details = () => {
               >
                 {houses.title}
               </Typography>
-              <section className="fav-card">
+              <section className="fav-card-details">
                 <FavoriteBorderIcon className="fav-card-icon" />
               </section>
             </section>
@@ -55,19 +55,19 @@ const Details = () => {
             <section className="details-cards-icon">
               <section className="bed-icon">
                 <HotelIcon className="icon" />
-                <Typography variant="p" component="p">
+                <Typography variant="p" component="p" color="#646464">
                   {houses.bedroom}beds
                 </Typography>
               </section>
               <section className="bath-icon">
                 <BathtubIcon className="icon" />
-                <Typography variant="p" component="p">
+                <Typography variant="p" component="p"  color="#646464">
                   {houses.bathroom}Baths
                 </Typography>
               </section>
               <section className="location-icon">
                 <LocationOnIcon className="icon" />
-                <Typography variant="p" component="p">
+                <Typography variant="p" component="p"  color="#646464">
                   {houses.city}
                 </Typography>
               </section>

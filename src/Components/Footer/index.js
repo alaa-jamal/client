@@ -8,6 +8,7 @@ import{Link} from 'react-router-dom';
 
 
 import "./style.css";
+import { Button } from '@mui/material';
 const Footer =()=>{
     return(
         <>
@@ -28,18 +29,17 @@ const Footer =()=>{
 
             </section>
             <section className="footer-section-center">
-            <Typography className ="footer-link"variant="h5" component="h5">
+            <Typography variant="h5" component="h5">
                  Links
                 </Typography>
                 
 
-                <Typography variant="p" component="p">
-                 {/* <Link to="/">Houses</Link> */}
-                 
+                <Typography  variant="p" component="p" >
+                 <Link className='footer-links'  to="/">Houses</Link>
                 </Typography>
 
-                <Typography variant="p" component="p">
-                 {/* <Link to ="/aboutus">About us</Link> */}
+                <Typography variant="p" component="p" >  
+                 <Link className='footer-links'  to="/aboutus">About Us</Link>
                 </Typography>
                 
             </section>

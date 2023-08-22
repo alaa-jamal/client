@@ -32,12 +32,12 @@
 
 }
 .fav-card{
-   position: absolute;
-   background-color:#FED047;
-   width:30px;
-    height:30px;
-    top: 24px;
-    right: 7px;
+    position: absolute;
+    background-color: #fed047;
+    width: 30px;
+    height: 30px;
+    top: 11px !important;
+    left: 299px !important;
     border-radius: 50px;
     
 }
@@ -69,6 +69,8 @@
 .icon{
     color:#1B4289;
     margin-top: 20px;
+  
+    
 }
 
 .seeDetails-btn{
@@ -77,9 +79,11 @@
     border:none;
     border-radius: 50px;
     color:#04266D;
-    padding:10px 19px;
+    padding:8px 19px;
     margin: 0px auto 15px auto;  
     text-decoration: none; 
+    font-size: 1.1rem;
+    font-family: 'Bree Serif', serif !important;
 }
 
 .seeDetails-btn-link{

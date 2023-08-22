@@ -1,17 +1,15 @@
 .about-section{
     display: flex;
-    
+    justify-content: space-around;
+    padding:30px;  
 }
 
 .about-section-right{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width:50%;  
+   
 }
-.about-section-right img{
-    width:300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
+.about-section-left{
+    width:50%;
+    padding:30px;
 }

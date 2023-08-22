@@ -15,10 +15,10 @@ import "./style.css";
 const Filter = () => {
   // initail Value
   const [houses, setHouse] = useState([]);
-  const [location, setLocation] = useState("");
-  const [type, setType] = useState("");
+  const [location, setLocation] = useState('');
+  const [type, setType] = useState('');
   const [room, setRoom] = useState(0);
-  const minPrice = 100;
+  const minPrice = 0;
   const maxPrice = 450;
   const [price, setPrice] = useState();
   const [filter, setFilter] = useState([]);
@@ -77,16 +77,16 @@ const Filter = () => {
 
   const handleFilter = (event) => {
     event.preventDefault();
-    const filterResult = houses.filter((house) => {
-      return ((house.city === location)||
-             (house.bedroom === +room) ||
-             (house.price === price))
-      
-  
-           
-      
 
-      // return(
+         // return ((house.city === location)||
+      //        (house.bedroom === +room) ||
+      //        (house.price === price))
+
+     
+    //  (!location || house.city === location) &&
+    // (!room || house.bedroom === parseInt(room)) &&
+    // (!price || house.price <= parseInt(price));
+    // return(
 
       //   // ((house.city === location) ||(house.bedroom === +room)||(house.price === price))||
       //   // ((house.city === location) &&(house.bedroom === +room))
@@ -99,12 +99,24 @@ const Filter = () => {
             
             //  (house.city ===location && house.bedroom===room)
             //  ;
-    });
 
-    setFilter(filterResult);
+    
+      
+  //  return ((house.city === location))
+
+    let filterResult = houses
+  
+      .filter((house) => (!location ? true :house.city === location ))
+      .filter((house) => ( house.for.toLowerCase().includes(type.toLowerCase())))
+      .filter((house) => (!room ? true : house.bedroom === parseInt(room)))
+      .filter((house) => (!price ? true : house.price === parseInt(price)));
+
+     setFilter(filterResult);
      console.log(filterResult);
     console.log("hi from filter page");
   };
+
+  
 
   return (
     <>
@@ -114,7 +126,7 @@ const Filter = () => {
             className="filter-searchInput"
             type="search"
             placeholder="Search for the location you want!"
-            onChange={handleChangeLocation}
+            onChange={handleChangeType}
           />
           <button className="filter-serach-btn" onClick={handleFilter}>
             Search

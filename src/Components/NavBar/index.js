@@ -119,9 +119,9 @@ function NavBar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                href="aboutus"
+                href="/"
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'white', display: 'block' , fontFamily:'Bree Serif' }}
               >
                 {page}
               </Button>

@@ -24,7 +24,7 @@
   margin-bottom: 20px;
 }
 
-.fav-card {
+.fav-card-details {
   position: absolute;
   background-color: #fed047;
   width: 30px;
@@ -42,13 +42,15 @@
 
 .details-left-title {
   margin-top: 20px;
+  
 }
 
 .details-house-title {
   color: #1b4289;
+  font-family: 'Bree Serif', serif !important;
 }
 .details-house-price {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #1b4289;
 }
 .details-para {

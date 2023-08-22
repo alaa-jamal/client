@@ -13,29 +13,33 @@ body{
 .MuiBox-root{
     justify-content: center;
     gap:30px;
+    
+    
 }
 
 
 .login-btn{
-    width:6vw;
-    height:30px;
+    width:8vw;
+    height:40px;
     background-color: #FED047; 
     border:none;
     border-radius: 50px;
     color:#1B4289;
-    font-size: 1rem;
-    font-style: bold;
-    font-family: "Roboto","Helvetica","Arial",sans-serif;
-    margin-right:10px;  
+    font-size: 1.2rem;
+    font-family: 'Bree Serif', serif !important;
+    margin-right:10px; 
+    
 }
 
 .signup-btn{
     border-radius: 50px;
     background-color: #1B4289;
     border:2px solid #FED047;
-    width: 6vw;
-    height:30px;
+    width: 8vw;
+    height:40px;
     color:#FFFFFF;
+    font-family: 'Bree Serif', serif !important;
+    font-size: 1.2rem;
    
 }
 
