@@ -1,4 +1,4 @@
-import  React from 'react';
+import  React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -11,9 +11,28 @@ import BathtubIcon from '@mui/icons-material/Bathtub';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import {Link} from 'react-router-dom';
 import './style.css';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
+import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 
 export default function HouseCard({house}) {
     const {title,description,image,bathroom,bedroom,price,city,id}=house;
+    
+    const [isFavorite, setIsFavorite] = useState(false);
+    const [snackbarOpen, setSnackbarOpen] = useState(false);
+  
+    const toggleFavorite = () => {
+      setIsFavorite(!isFavorite);
+      setSnackbarOpen(true); 
+    };
+  
+    const handleCloseSnackbar = () => {
+      setSnackbarOpen(false); 
+    };
+
+    
+
+    
 
   return (
     <section>
@@ -25,9 +44,21 @@ export default function HouseCard({house}) {
         sx={{ height: 226}}
         image ={image}
       />
+      
       <section className="fav-card">
-      <FavoriteBorderIcon className="fav-card-icon" />
-      </section>
+          
+          {isFavorite ? (
+            <FavoriteOutlinedIcon
+              className="fav-card-icon favorite"
+              onClick={toggleFavorite}
+            />
+          ) : (
+            <FavoriteBorderIcon
+              className="fav-card-icon"
+              onClick={toggleFavorite}
+            />
+          )}
+        </section>
        
       <CardContent class="card-content">
         <section class="card-content-top">
@@ -76,6 +107,21 @@ export default function HouseCard({house}) {
         
       </CardActions>
     </Card>
+
+
+    <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={2000} // Adjust as needed
+        onClose={handleCloseSnackbar}
+      >
+        <MuiAlert
+          onClose={handleCloseSnackbar}
+          severity="success"
+          sx={{ width: '100%' }}
+        >
+          {isFavorite ? 'Added to Favorites' : 'Removed from Favorites'}
+        </MuiAlert>
+      </Snackbar>
 
     </section>
 

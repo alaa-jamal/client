@@ -12,10 +12,11 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import image from '../../Utilis/images/logo.png';
+import {Link} from 'react-router-dom';
 import '@fontsource/roboto/400.css';
 import "./style.css";
 
-const pages = ['Houses', 'About us'];
+// const pages = ['Houses', 'About us'];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -89,11 +90,11 @@ function NavBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
+              {/* {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
-              ))}
+              ))} */}
             </Menu>
           </Box>
           
@@ -116,16 +117,15 @@ function NavBar() {
            
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                href="/"
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' , fontFamily:'Bree Serif' }}
-              >
-                {page}
+           
+              <Button >
+                <Link className='nav-links' to ="/">Home</Link>
               </Button>
-            ))}
+
+              <Button >
+              <Link  className='nav-links' to ="/aboutus">About us</Link>
+              </Button>
+          
           </Box>
          <section className="header-right">
          <button className="login-btn">Login</button>

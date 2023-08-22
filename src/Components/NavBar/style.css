@@ -17,6 +17,44 @@ body{
     
 }
 
+.nav-links{
+    color:white;
+    text-decoration: none;
+    font-family: 'Bree Serif', serif !important;
+
+}
+.nav-links:hover{
+    color:#FED047;
+   
+    
+}
+
+.nav-links::after{
+    content: "";
+display: block;
+width: 0;
+height: 1.5px;
+background-color: #ffcf00;
+transition: width 0.5s;
+
+}
+.nav-links:hover::after {
+width: 100%;
+}
+.nav-links::after {
+width: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .login-btn{
     width:8vw;
