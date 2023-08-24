@@ -1,0 +1,77 @@
+.userInformation{
+    border:1px solid #cac8c8;
+    border-radius: 5px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    width:60vw;
+    
+    
+  
+} 
+
+
+/* .css-wb57ya-MuiFormControl-root-MuiTextField-root {
+   
+
+    min-width: 0;
+    padding: 10px !important;
+    width: 50% !important;
+}
+
+*/
+
+.css-wb57ya-MuiFormControl-root-MuiTextField-root {
+  
+    width: 80% !important;
+}
+
+.css-19kzrtu {
+    padding: 0px !important;
+    /* width:40% !important; */
+}
+
+
+
+.save-edit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+
+.save-edit-btn{
+    width:7vw;
+    height:50px;
+    background-color: #FED047;
+    margin: 10px 0px;
+    border:none;
+    border-radius: 5px;
+    color:#1B4289;
+    font-family: 'Bree Serif', serif;
+    font-size: 1.2rem;
+}
+
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: -5px;
+    left: 0;
+    margin: 6px !important;
+   
+  
+   
+  
+}
+
+
+.userInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}

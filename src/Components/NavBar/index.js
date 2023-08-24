@@ -128,7 +128,9 @@ function NavBar() {
           
           </Box>
          <section className="header-right">
-         <button className="login-btn">Login</button>
+         <button className="login-btn">
+          <Link className = "header-link"to="/login">Login</Link>
+         </button>
          <button className="signup-btn">SignUp</button>
    
 
