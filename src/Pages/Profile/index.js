@@ -183,7 +183,7 @@ const Profile = (props) => {
 
          <section className="profile-section-bottom">
 
-         <Typography
+         {/* <Typography
        variant="h6"
        component="h6"
        color="#FFFFFF"
@@ -195,7 +195,7 @@ const Profile = (props) => {
      >
       <span className="hi">Hi  </span>
        Alaa Jamal
-    </Typography>
+    </Typography> */}
            {/* Start */}
 {/* 
            <Box sx={{ display: 'flex' }}>
