@@ -6,22 +6,41 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
+import Snackbar from '@mui/material/Snackbar';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+import MuiAlert from '@mui/material/Alert';
 import './style.css';
 
 
 
 const UserProfile = ()=>{
 
-    // For Dialog 
-    const [open, setOpen] = React.useState(false);
+  // For snakbar& Dialog
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
 
-    const handleClickOpen = () => {
-      setOpen(true);
-    };
-  
-    const handleClose = () => {
-      setOpen(false);
-    };
+const [open, setOpen] = useState(false);
+const [snackbarOpen, setSnackbarOpen] = useState(false);
+
+const handleOpen = () => {
+setOpen(true);
+};
+
+const handleClose = () => {
+setOpen(false);
+};
+
+const handleAgree = () => {
+setOpen(false);
+setSnackbarOpen(true);
+};
+
+const handleSnackbarClose = () => {
+setSnackbarOpen(false);
+};
+
 
 
      //1) initial value
@@ -83,25 +102,35 @@ className='user-info-title'
 </section>
 
 <section className='save-edit'>
-<button className='save-edit-btn' onClick={handleClickOpen}>Save Edit</button>
+<button className='save-edit-btn' onClick={handleOpen}>Save Edit</button>
 
-<Dialog
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
-        <DialogTitle id="alert-dialog-title">
-          {"Are you sure  to update your personal information ?"}
-        </DialogTitle>
-      
-        <DialogActions>
-          <Button className='disagree-btn' onClick={handleClose}>Disagree</Button>
-          <Button className='agree-btn' onClick={handleClose} autoFocus>
-            Agree
-          </Button>
-        </DialogActions>
-      </Dialog>
+{/* For Dialoge & Sanakbar */}
+
+<Dialog open={open} onClose={handleClose}>
+       
+       <DialogTitle id="alert-dialog-title">
+           {"Are you sure to update your personal information?"}
+         </DialogTitle>
+         <DialogActions>
+           <Button onClick={handleClose} className="disagree-btn" color="primary">
+             Disagree
+           </Button>
+           <Button onClick={handleAgree} className="agree-btn" color="primary">
+             Agree
+           </Button>
+         </DialogActions>
+       </Dialog>
+       <Snackbar
+         open={snackbarOpen}
+         autoHideDuration={6000}
+         onClose={handleSnackbarClose}
+       >
+         <MuiAlert onClose={handleSnackbarClose} severity="success">
+           Update Successful!
+         </MuiAlert>
+       </Snackbar>
+     
+ 
 </section>
 
 

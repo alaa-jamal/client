@@ -23,6 +23,7 @@
 
 .myHouses-titel{
     margin-top: 20px !important;
+    
 }
 
 
@@ -80,19 +81,17 @@
 } */
 
 
-/* .alert-dialog-tit{
-    background-color: #1B4289 !important;
-    color:#FFFFFF !important;
-    text-align: center !important;
-    font-size: 1.2rem !important;
-} */
 
-.alert-dialog-tit {
-    color:#FFFFFF !important;
-    font-size: 1.5rem !important;
+
+.alert-dialog-header-title {
     text-align: center !important;
     background-color: #1B4289 !important;
+    color: #FFFFFF!important;
+    font-size: 1.9rem !important;
+    
 }
+
+
 
 
 .text-area{

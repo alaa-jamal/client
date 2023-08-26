@@ -19,6 +19,10 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import Snackbar from '@mui/material/Snackbar';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+import MuiAlert from '@mui/material/Alert';
 
 
 import "./style.css";
@@ -257,7 +261,7 @@ const MyHouses = () => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle  className="alert-dialog-tit">
+        <DialogTitle id="alert-dialog-title" className="alert-dialog-header-title">
           {"Update House Information"}
         </DialogTitle>
         <DialogContent className="dialog-content">

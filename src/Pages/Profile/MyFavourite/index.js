@@ -38,7 +38,7 @@ const MyFavourite = () => {
 
 
 
-// For snakbar
+// For snakbar& Dialog
 function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
   }
@@ -224,7 +224,7 @@ const handleSnackbarClose = () => {
       </section>
 
 
-      {/* For Dialoge */}
+      {/* For Dialoge & Sanakbar */}
 
       <Dialog open={open} onClose={handleClose}>
        
