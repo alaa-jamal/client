@@ -116,12 +116,11 @@ function NavBar() {
           >
            
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box className="header-navigation" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
            
               <Button >
                 <Link className='nav-links' to ="/">Home</Link>
               </Button>
-
               <Button >
               <Link  className='nav-links' to ="/aboutus">About us</Link>
               </Button>

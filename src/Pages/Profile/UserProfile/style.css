@@ -64,22 +64,24 @@
 }
 
 .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root {
-   
-    width: 100% ;
   
+    width: 100% ;
     margin-bottom: 20px;
 }
 
 #alert-dialog-title{
     color:#1B4289;
+    font-size: 0.9rem !important;
 }
 
 .disagree-btn{
-    color:red;
+    color:red !important;
+    font-size: 0.7rem !important;
 }
 
 .agree-btn{
-    color:green;
+    color:green !important;
+    font-size: 0.7rem !important;
 }
 
 .user-info-title{
@@ -106,4 +108,9 @@
 
 .css-10mi8st-MuiSvgIcon-root-MuiAvatar-fallback {
   color:#FED047 !important;
+}
+
+.css-bdhsul-MuiTypography-root-MuiDialogTitle-root {
+    font-size: 0.9rem !important;
+   
 }

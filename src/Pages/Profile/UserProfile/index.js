@@ -2,7 +2,6 @@ import React,{useEffect,useState} from 'react';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
-
 import DialogTitle from '@mui/material/DialogTitle';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
@@ -68,33 +67,18 @@ className='user-info-title'
 
 
 
-
-{/* <section className='user-info-details'>
-<Typography
-className='user-info-title'
- variant="p"
-  component="p"
-  color ="#1B4289"
-  font-family= 'Bree Serif'>
-  User Name :
-</Typography>
-<Typography
-className='user-info-title'
- variant="p"
-  component="p"
-  color ="#1B4289"
-  font-family= 'Bree Serif'>
-  User Information
-</Typography>
-</section> */}
-
-
-
-<TextField fullWidth  label="UserName"  value={user[0].username} />  
+<TextField
+            autoFocus
+            
+            label="UserName"
+            type="text"
+            fullWidth
+            defaultValue="Alaa Jamal"
+            />
 {/* <TextField fullWidth  id="fullWidth" value={user[0].password} />  */}
- <TextField fullWidth label="Pasword"  value={user[0].password} /> 
-<TextField fullWidth label="Email" value={user[0].email} />
-<TextField fullWidth label="Phone" value={user[0].phone} /> 
+<TextField fullWidth label="Pasword"  autoFocus type="password"   defaultValue={"**********"} /> 
+<TextField fullWidth label="Email"  autoFocus type = "email" defaultValue={"alaa99702@gmail.com"} />
+<TextField fullWidth label="Phone" autoFocus type = "phone" defaultValue={"0592813281"} /> 
 
 </section>
 

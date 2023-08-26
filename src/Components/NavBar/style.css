@@ -11,7 +11,7 @@ body{
     padding-left: 90px;
 }
 .MuiBox-root{
-    justify-content: center;
+    justify-content: center !important;
     gap:30px;
     
     

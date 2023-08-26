@@ -10,8 +10,8 @@
 .filter-search{
 
     position: absolute;
-    top: 131px;
-    left: 387px;
+    top: 131px !important;
+    left: 387px !important;
     
 }
 

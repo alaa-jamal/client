@@ -12,6 +12,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import UserProfile from './UserProfile';
+import MyHouses from './MyHouses';
 import "./style.css";
 
 
@@ -327,7 +328,7 @@ const Profile = (props) => {
        <UserProfile/>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <MyHouses/>
       </TabPanel>
       <TabPanel value={value} index={2}>
         Item Three
