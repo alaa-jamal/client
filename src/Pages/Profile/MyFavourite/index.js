@@ -9,76 +9,18 @@ import houseImg from "../../../Utilis/images/house1.jpeg";
 import HotelIcon from "@mui/icons-material/Hotel";
 import BathtubIcon from "@mui/icons-material/Bathtub";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import ModeEditIcon from '@mui/icons-material/ModeEdit';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import houseImg2 from  "../../../Utilis/images/house2.jpeg";
 import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
+import Snackbar from '@mui/material/Snackbar';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+import MuiAlert from '@mui/material/Alert';
 
 
 import "./style.css";
 
-const MyHouses = () => {
-
-  // For Dialog
-
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-
-  // For Select location 
-  const [location, setLocation] = useState('');
-  const [type, setType] = useState('For');
-  const [price, setPrice] = useState("200$");
-  const [bedroom, setBedroom] = useState("");
-  const [bathroom, setBathroom] = useState("");
-  
-
-  const handleChangeLocation = (event) => {
-    setLocation(event.target.value);
-  };
-
-  const handleChangeType = (event) => {
-    setType(event.target.value);
-  };
-
-  const handleChangePrice = (event) => {
-    setPrice(event.target.value);
-  };
-
-  const handleChangeBedroom=(event)=>{
-    setBedroom(event.target.value);
-
-  }
-
-  const handleChangeBathroom=(event)=>{
-    setBathroom(event.target.value);
-
-  }
-
-
-  // For snakbar 
-
- 
-
- 
-
-
-
-
-
+const MyFavourite = () => {
 
   //1) initial value
   const [house, setHouse] = useState([]);
@@ -93,6 +35,34 @@ const MyHouses = () => {
         console.error("Error fetching data:", error);
       });
   }, []);
+
+
+
+// For snakbar
+function Alert(props) {
+    return <MuiAlert elevation={6} variant="filled" {...props} />;
+  }
+
+const [open, setOpen] = useState(false);
+const [snackbarOpen, setSnackbarOpen] = useState(false);
+
+const handleOpen = () => {
+  setOpen(true);
+};
+
+const handleClose = () => {
+  setOpen(false);
+};
+
+const handleAgree = () => {
+  setOpen(false);
+  setSnackbarOpen(true);
+};
+
+const handleSnackbarClose = () => {
+  setSnackbarOpen(false);
+};
+
 
 
 
@@ -169,12 +139,14 @@ const MyHouses = () => {
 
         <section className="myHouses-icons">
 
-            <ModeEditIcon className="edit-icon" onClick={handleClickOpen}/>
-           < DeleteOutlineIcon className="delete-icon"/>
+           
+           < DeleteOutlineIcon className="delete-icon" onClick={handleOpen}/>
 
             
         </section>
       </section>
+
+
       <section className="myHouses">
         <section className="myHouses-img">
           <img src={houseImg2} />
@@ -244,159 +216,78 @@ const MyHouses = () => {
 
         <section className="myHouses-icons">
 
-            <ModeEditIcon className="edit-icon" onClick={handleClickOpen}/>
-           < DeleteOutlineIcon className="delete-icon"/>
+           
+           < DeleteOutlineIcon className="delete-icon" onClick={handleOpen}/>
 
             
         </section>
       </section>
 
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
-        <DialogTitle  className="alert-dialog-tit">
-          {"Update House Information"}
-        </DialogTitle>
-        <DialogContent className="dialog-content">
-          <DialogContentText id="alert-dialog-description">
-          <TextField
-            autoFocus
-            margin="dense"
-            label="Title"
-            type="text"
-            fullWidth
-            defaultValue="Classic House"
-            />
 
-<TextField className="text-area"
-          id="outlined-multiline-static"
-          label="Description"
-          multiline
-          
-          rows={4}
-          fullWidth
+      {/* For Dialoge */}
 
-          defaultValue="Elegant, grand proportioned two bedroom, two bathroom condominium in a meticulously-run, elevator building. With views overlooking Berkeley Street this oversized property is stunning from start to finish. The welcoming foyer features beautiful original marble flooring."
-        />
-
-
-<Box sx={{ minWidth: 120 }}>
-      <FormControl fullWidth className="update-location">
-        <InputLabel id="demo-simple-select-label">Location</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={location}
-          label="Location"
-          
-          onChange={handleChangeLocation}
-        >
-          <MenuItem value={"Gaza"}>Gaza</MenuItem>
-          <MenuItem value={"Rafah"}>Rafah</MenuItem>
-          <MenuItem value={"Khanyounis"}>Khanyounis</MenuItem>
-        </Select>
-      </FormControl>
-    </Box>
-
-    <section className="udpate-price-type">
-
-    <Box sx={{ minWidth: 120 }}>
-      <FormControl  className="update-type"  >
-        <InputLabel id="demo-simple-select-label">For</InputLabel>
-        <Select 
+      <Dialog open={open} onClose={handleClose}>
        
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={type}
-          label="For"
-          defaultValue={"Rent"}
-          onChange={handleChangeType}
-        >
-          <MenuItem value={"Rent"}>Rent</MenuItem>
-          <MenuItem value={"Sale"}>Sale</MenuItem>
-        
-        </Select>
-      </FormControl>
-    </Box>
-
-    <TextField 
-            className="update-price"
-            id="outlined-Bedroom-input"
-            label="Price"
-            type="number"
-            defaultValue={"200$"}
-            sx={{ width: "120px" }}
-            value={price}
-            onChange={handleChangePrice}
-          />
-
-    </section>
-
-
-    <section className="udpate-beds-bath">
-
-    <TextField 
-        className="update-bed"
-        id="outlined-Bedroom-input"
-        label="Bedroom"
-        type="number"
-        defaultValue={"3"}
-        sx={{ width: "120px" }}
-        value={bedroom}
-        onChange={handleChangeBedroom}
-      />
-
-<TextField 
-        className="update-bath"
-        id="outlined-Bedroom-input"
-        label="Bathroom"
-        type="number"
-        defaultValue={"1"}
-        sx={{ width: "120px" }}
-        value={bathroom}
-        onChange={handleChangeBathroom}
-      />
-
-</section>
-
-    
-
-    
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-          </DialogContentText>
-        </DialogContent>
+      <DialogTitle id="alert-dialog-title">
+          {"Are you sure delete house from a Favourite List?"}
+        </DialogTitle>
         <DialogActions>
-          <Button className = "save-btn"onClick={handleClose}>Save</Button>
-          <Button className="cancel-btn" onClick={handleClose} autoFocus>
-            Cancel
+          <Button onClick={handleClose} className="disagree-btn" color="primary">
+            Disagree
+          </Button>
+          <Button onClick={handleAgree} className="agree-btn" color="primary">
+            Agree
           </Button>
         </DialogActions>
       </Dialog>
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={6000}
+        onClose={handleSnackbarClose}
+      >
+        <MuiAlert onClose={handleSnackbarClose} severity="success">
+          Deleted Successful!
+        </MuiAlert>
+      </Snackbar>
+    
+
+
+  
+
+
+
+   
+
+
+    
+
+    
+
+    
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+       
 
 
      
@@ -410,4 +301,4 @@ const MyHouses = () => {
 
 };
 
-export default MyHouses;
+export default MyFavourite;

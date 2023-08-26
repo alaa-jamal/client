@@ -80,11 +80,18 @@
 } */
 
 
-.alert-dialog-tit{
+/* .alert-dialog-tit{
     background-color: #1B4289 !important;
     color:#FFFFFF !important;
     text-align: center !important;
     font-size: 1.2rem !important;
+} */
+
+.alert-dialog-tit {
+    color:#FFFFFF !important;
+    font-size: 1.5rem !important;
+    text-align: center !important;
+    background-color: #1B4289 !important;
 }
 
 
@@ -108,3 +115,28 @@
 .update-type ,.update-price{
     width:200px !important;
 }
+
+.update-bed ,.update-bath{
+    width:200px !important;
+}
+
+
+.udpate-beds-bath{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.save-btn{
+    background-color: #fed047 !important;
+    color:#1B4289 !important;
+    font-family: 'Bree Serif', serif !important;
+}
+.cancel-btn{
+    background-color: #ecebea !important;
+    color:#1B4289 !important;
+    font-family: 'Bree Serif', serif !important;
+
+}
+
+
