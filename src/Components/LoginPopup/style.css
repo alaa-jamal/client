@@ -1,0 +1,88 @@
+ 
+/*
+.css-bdhsul-MuiTypography-root-MuiDialogTitle-root {
+    text-align: center !important;
+}
+.css-qfso29-MuiTypography-root-MuiDialogContentText-root{
+    text-align: center !important;
+
+}
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+    border-radius: 17px !important;
+}
+.css-hlj6pa-MuiDialogActions-root{
+    justify-content: center !important;
+    flex-direction: column-reverse !important;
+    gap: 20px !important;
+}
+.log-btn{
+    border-radius: 50px !important;
+    width: 50% !important;
+    color: #1B4289 !important;
+    background-color: #FED047 !important;
+    font-size: 1rem !important;
+    margin-left: 0% !important;
+    text-transform: none !important;
+   
+
+}
+.cancel-btn{
+    color: #71BBB0 !important;
+    font-size: large !important;
+    margin-left: 0% !important;
+
+}
+
+.username-filed{
+    height:20px !important;
+    margin-bottom: 50px !important;
+
+}
+
+*/
+
+
+
+.login-popup{
+    display: flex;
+    border-radius: 50px !important;
+   
+}
+
+.login-popup-right{
+    width:50%;
+}
+
+.login-popup-left{
+    width:50%;
+    background-color: #1B4289;
+
+}
+
+
+
+.login-popup-right img{
+    width:300px;
+    height:300px;
+    margin-top:40px;
+}
+
+
+
+
+
+.sign-in-title{
+    color:#FED047;
+    text-align: center !important;
+    font-size: 25px !important;
+}
+
+.sign-in-title2{
+    color:#FFFFFF !important;
+    font-size: 1rem !important;
+    margin-bottom: 20px !important;
+    text-align: center;
+}
+
+
+ 

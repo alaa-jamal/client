@@ -70,7 +70,7 @@ width: 0;
     font-size: 1.2rem;
     font-family: 'Bree Serif', serif !important;
     margin-right:10px; 
-    
+    cursor: pointer;
 }
 
 .signup-btn{
@@ -82,6 +82,7 @@ width: 0;
     color:#FFFFFF;
     font-family: 'Bree Serif', serif !important;
     font-size: 1.2rem;
+    cursor: pointer;
    
 }
 

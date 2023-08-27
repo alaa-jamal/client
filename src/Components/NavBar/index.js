@@ -1,4 +1,4 @@
-import  React from 'react';
+import  React,{useState }from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -14,6 +14,8 @@ import MenuItem from '@mui/material/MenuItem';
 import image from '../../Utilis/images/logo.png';
 import {Link} from 'react-router-dom';
 import '@fontsource/roboto/400.css';
+import LoginPopup from '../LoginPopup';
+import SignPopup from '../SignUp';
 import "./style.css";
 
 // const pages = ['Houses', 'About us'];
@@ -21,6 +23,8 @@ import "./style.css";
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false); // Initialize as false
+  const [isSignDialogOpen, setIsSignDialogOpen] = useState(false); // Initialize as false
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -35,6 +39,16 @@ function NavBar() {
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
+  };
+
+  // For Dialog (login/signup)
+
+
+  const handleLoginClick = () => {
+    setIsLoginDialogOpen(true); // Open the login dialog
+  };
+  const handleSignClick = () => {
+    setIsSignDialogOpen(true); // Open the login dialog
   };
 
   return (
@@ -127,10 +141,10 @@ function NavBar() {
           
           </Box>
          <section className="header-right">
-         <button className="login-btn">
-          <Link className = "header-link"to="/login">Login</Link>
+         <button className="login-btn" onClick={handleLoginClick}>
+          Login
          </button>
-         <button className="signup-btn">SignUp</button>
+         <button className="signup-btn" onClick={handleSignClick}>SignUp</button>
    
 
          </section>
@@ -167,6 +181,10 @@ function NavBar() {
           </Box> */}
         </Toolbar>
       </Container>
+
+       {/* {isLoginPopupOpen && <LoginPopup />}      */}
+       {isLoginDialogOpen && <LoginPopup />}
+      {isSignDialogOpen && <SignPopup />}
     </AppBar>
   );
 }

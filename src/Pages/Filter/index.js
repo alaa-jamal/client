@@ -48,6 +48,7 @@ const Filter = () => {
       .then((response) => response.json())
       .then((data) => {
         setHouse(data);
+        setFilter(data);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);

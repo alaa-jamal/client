@@ -362,8 +362,10 @@ const MyHouses = () => {
         value={bathroom}
         onChange={handleChangeBathroom}
       />
-
 </section>
+
+
+
 
     
 
