@@ -59,11 +59,16 @@
     background-color: #1B4289 !important;
     border-radius: 5px;
 }
+
+
 .tab{
-    display: flex;
+    /* display: flex; */
     flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap:30px !important;
     color:#FFFFFF;
 }
+
 
 
 

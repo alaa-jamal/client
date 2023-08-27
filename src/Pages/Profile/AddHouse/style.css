@@ -1,0 +1,82 @@
+#vertical-tabpanel-3{
+    width:60%; 
+    
+}
+
+.addInformation{
+    border:1px solid #cac8c8;
+    border-radius: 10px;
+    
+
+}
+
+.add-info-title{
+    background-color: #1B4289;
+    height:50px !important;
+    color:#FFFFFF !important;
+    text-align: center !important;
+    padding-top: 5px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.addInformationDetails{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+.addInfoTitle{
+    margin-top:5px !important;
+    padding:5px;
+}
+
+.text-area-filed {
+    width: 80% !important;
+}
+
+
+.css-1ualgfl-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+   
+    width: 614px !important;
+   
+}
+
+
+.image-container{
+    display: flex;
+    justify-content: center;
+}
+.image-container img{
+    border: 2px solid #cac8c8;
+    width: 10%;
+    display: none;
+    /* height: 40%; */
+    border-radius: 20px;
+    
+}
+
+
+.save-add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+
+.save-add-btn{
+    width:10vw;
+    height:50px;
+    background-color: #fed047;
+    margin: 10px 0px;
+    border:none;
+    border-radius: 30px;
+    color:#1B4289;
+    font-family: 'Bree Serif', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+

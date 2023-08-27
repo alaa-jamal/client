@@ -279,7 +279,6 @@ const MyHouses = () => {
           id="outlined-multiline-static"
           label="Description"
           multiline
-          
           rows={4}
           fullWidth
 
