@@ -7,6 +7,7 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import TextField from "@mui/material/TextField";
 import loginImg from "../../Utilis/images/login.png";
+import Typography from "@mui/material/Typography";
 import "./style.css";
 
 const LoginPopup = () => {
@@ -43,12 +44,26 @@ const LoginPopup = () => {
                 type="password"
                 fullWidth
               />
-            </DialogContent>
-            <DialogActions>
-              {/* <Button  className="cancel-btn" onClick={handleClose}>Cancel</Button> */}
-              <Button className="log-btn" onClick={handleClose}>
+                <section className="section-log-btn">
+
+                <Button className="log-btn" onClick={handleClose}>
                 Sign In
               </Button>
+
+             
+              
+                </section>
+                <Typography
+                className="text-signup"
+                variant="p"
+                component="p"
+              >
+                Not a member ? Sign Up
+              </Typography>
+            </DialogContent>
+            <DialogActions>
+              
+           
             </DialogActions>
           </section>
         </section>

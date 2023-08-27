@@ -41,12 +41,7 @@
 }
 
 .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
-    text-align: left;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    top: -5px;
-    left: 0;
+   
     margin: 10px !important;
    
   
@@ -114,3 +109,5 @@
     font-size: 0.9rem !important;
    
 }
+
+

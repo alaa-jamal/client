@@ -1,34 +1,53 @@
-/* .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root{
-    border-radius: 50px !important;
-    background-color: #FBFAFF !important;
+.signup-popup-right {
+  width: 50%;
 }
-.css-bdhsul-MuiTypography-root-MuiDialogTitle-root {
-    text-align: center !important;
+.signup-popup-left {
+  width: 50%;
+  background-color: #1b4289;
 }
-.css-qfso29-MuiTypography-root-MuiDialogContentText-root{
-    text-align: center !important;
+.signup-popup-right img {
+  width: 300px;
+  height: 300px;
+  margin-top: 90px;
+}
+.username-signup,
+.email-signup,
+.password-signup,
+.phone-signup {
+  margin-bottom: 19px !important;
+  background-color: #ffffff !important;
+  height: 50px !important;
+  border-radius: 50px !important;
+  border: 1px solid #ffffff !important;
+}
+.signup-popup {
+  display: flex;
+  border-radius: 50px !important;
+}
 
+.sign-up-title {
+  color: #fed047;
+  text-align: center !important;
+  font-size: 25px !important;
 }
-.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
-    border-radius: 17px !important;
-}
-.css-hlj6pa-MuiDialogActions-root{
-    justify-content: center !important;
-    flex-direction: column-reverse !important;
-    gap: 20px !important;
-}
-.sign-btn{
-    border-radius: 50px !important;
-    width: 80% !important;
-    color: #fff !important;
-    background-color: #71BBB0 !important;
-    font-size: larger !important;
-    margin-left: 0% !important;
 
+.sign-up-title2 {
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  margin-bottom: 20px !important;
+  text-align: center;
 }
-.cancel-btn{
-    color: #71BBB0 !important;
-    font-size: large !important;
-    margin-left: 0% !important;
 
-} */
+.section-signup-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.signUp-btn {
+  border-radius: 50px !important;
+  width: 50% !important;
+  color: #1b4289 !important;
+  background-color: #fed047 !important;
+  font-size: 1rem !important;
+  text-transform: none !important;
+}

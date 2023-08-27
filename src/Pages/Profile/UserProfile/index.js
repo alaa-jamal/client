@@ -86,7 +86,7 @@ const UserProfile = () => {
 
           <TextField
             autoFocus
-            value={user[0].username}
+            value={"user[0].username"}
             label="UserName"
             type="text"
             fullWidth
@@ -98,7 +98,7 @@ const UserProfile = () => {
             label="Pasword"
             autoFocus
             type="password"
-            value={user[0].password}
+            value={"user[0].password"}
             defaultValue={"*******"}
           />
           <TextField
@@ -106,7 +106,7 @@ const UserProfile = () => {
             label="Email"
             autoFocus
             type="email"
-            value={user[0].email}
+            value={"user[0].email"}
             defaultValue={"tasneem@gmail.com"}
           />
           <TextField
@@ -114,7 +114,7 @@ const UserProfile = () => {
             label="Phone"
             autoFocus
             type="phone"
-            value={user[0].phone}
+            value={"user[0].phone"}
             defaultValue={"0592258631"}
           />
         </section>

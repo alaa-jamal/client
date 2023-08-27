@@ -259,8 +259,9 @@ const Filter = () => {
           color="#1B4289"
           textAlign="center"
         >
-          <span className="numOfHouse"> {filter.length} </span>
-           Houses Available
+           Houses Available : (
+           <span className="numOfHouse"> {filter.length} </span>
+)
         </Typography>
   
      <section className="data-filter-section">

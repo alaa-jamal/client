@@ -1,88 +1,69 @@
- 
-/*
 .css-bdhsul-MuiTypography-root-MuiDialogTitle-root {
-    text-align: center !important;
+  text-align: center !important;
 }
-.css-qfso29-MuiTypography-root-MuiDialogContentText-root{
-    text-align: center !important;
-
-}
-.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
-    border-radius: 17px !important;
-}
-.css-hlj6pa-MuiDialogActions-root{
-    justify-content: center !important;
-    flex-direction: column-reverse !important;
-    gap: 20px !important;
-}
-.log-btn{
-    border-radius: 50px !important;
-    width: 50% !important;
-    color: #1B4289 !important;
-    background-color: #FED047 !important;
-    font-size: 1rem !important;
-    margin-left: 0% !important;
-    text-transform: none !important;
-   
-
-}
-.cancel-btn{
-    color: #71BBB0 !important;
-    font-size: large !important;
-    margin-left: 0% !important;
-
+.css-qfso29-MuiTypography-root-MuiDialogContentText-root {
+  text-align: center !important;
 }
 
-.username-filed{
-    height:20px !important;
-    margin-bottom: 50px !important;
-
+.section-log-btn {
+  display: flex;
+  justify-content: center;
 }
 
-*/
-
-
-
-.login-popup{
-    display: flex;
-    border-radius: 50px !important;
-   
+.log-btn {
+  border-radius: 50px !important;
+  width: 50% !important;
+  color: #1b4289 !important;
+  background-color: #fed047 !important;
+  font-size: 1rem !important;
+  text-transform: none !important;
 }
 
-.login-popup-right{
-    width:50%;
+.username-filed {
+  margin-bottom: 50px !important;
+  background-color: #ffffff !important;
+  height: 50px !important;
+  border-radius: 50px !important;
+  border: 1px solid #ffffff !important;
 }
 
-.login-popup-left{
-    width:50%;
-    background-color: #1B4289;
-
+.login-popup {
+  display: flex;
+  border-radius: 50px !important;
 }
 
-
-
-.login-popup-right img{
-    width:300px;
-    height:300px;
-    margin-top:40px;
+.login-popup-right {
+  width: 50%;
 }
 
-
-
-
-
-.sign-in-title{
-    color:#FED047;
-    text-align: center !important;
-    font-size: 25px !important;
+.login-popup-left {
+  width: 50%;
+  background-color: #1b4289;
 }
 
-.sign-in-title2{
-    color:#FFFFFF !important;
-    font-size: 1rem !important;
-    margin-bottom: 20px !important;
-    text-align: center;
+.login-popup-right img {
+  width: 300px;
+  height: 300px;
+  margin-top: 40px;
 }
 
+.sign-in-title {
+  color: #fed047;
+  text-align: center !important;
+  font-size: 25px !important;
+}
 
- 
+.sign-in-title2 {
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  margin-bottom: 20px !important;
+  text-align: center;
+}
+
+.text-signup {
+  text-align: center !important;
+  margin-top: 12px !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-family: sans-serif !important;
+}
