@@ -2,13 +2,12 @@
     background-image: url(../../Utilis/images/filter-background.png);
     background-size: cover;
     background-repeat: no-repeat;
-    height:100vh !important;
+    height:70vh !important;
     position:relative;
     
 }
 
 .filter-search{
-
     position: absolute;
     top: 131px !important;
     left: 387px !important;
@@ -21,7 +20,9 @@
     height:60px;
     padding: 10px;
     border-radius: 50px;
-    border: 2px solid #1b4189a0;
+    /* border: 2px solid #1b4189a0; */
+    border:none;
+    /* outline: none; */
 
 
 
@@ -29,14 +30,15 @@
 .filter-serach-btn{
     position: absolute;
     border: none;
-    height: 56px;
-    width: 92px;
-    left: 452px;
-    top: 2px;
+    height: 60px;
+    width: 104px;
+    left: 439px;
+    top: 0px;
     border-radius: 50px;
     background-color: #1B4289;
-    color:#FFFFFF;
+    color: #FFFFFF;
     cursor: pointer;
+    font-size: 19px;
 }
 
 .filter-section-bottom{
@@ -56,8 +58,7 @@
 
 
 .data-filter-section{
-    height:200vh;
-    margin-top:100px;
+    margin-top:80px;
     background-color: #FFFFFF;
     display: flex;
     flex-wrap: wrap;

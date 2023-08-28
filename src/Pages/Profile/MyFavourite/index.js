@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogTitle from "@mui/material/DialogTitle";
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
+
 import Typography from "@mui/material/Typography";
 import houseImg from "../../../Utilis/images/house1.jpeg";
 import HotelIcon from "@mui/icons-material/Hotel";
@@ -13,11 +12,7 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import houseImg2 from  "../../../Utilis/images/house2.jpeg";
 import Button from '@mui/material/Button';
 import Snackbar from '@mui/material/Snackbar';
-import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
 import MuiAlert from '@mui/material/Alert';
-
-
 import "./style.css";
 
 const MyFavourite = () => {

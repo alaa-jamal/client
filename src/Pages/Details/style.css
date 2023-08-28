@@ -9,7 +9,7 @@
 }
 
 .details-left img {
-  max-width: 500vw;
+  width: 40vw !important;
   max-height: 400px;
   border-radius: 10px;
 }
@@ -30,7 +30,7 @@
   width: 30px;
   height: 30px;
   top: 3px;
-  left: 350px;
+  left: 500px;
   border-radius: 50px;
 }
 .fav-card-icon {

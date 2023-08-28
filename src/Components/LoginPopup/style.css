@@ -67,3 +67,6 @@
   font-size: 12px !important;
   font-family: sans-serif !important;
 }
+.username-filed fieldset{
+  display: none;
+}

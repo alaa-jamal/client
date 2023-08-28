@@ -42,6 +42,7 @@ const MyHouses = () => {
   };
 
 
+
   // For Select location 
   const [location, setLocation] = useState('');
   const [type, setType] = useState('For');

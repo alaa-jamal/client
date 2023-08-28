@@ -14,6 +14,10 @@ const UserProfile = () => {
   const [user, setUser] = useState([]);
   const [open, setOpen] = useState(false);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [name, setName] = useState(user.username);
+  const [password, setPassword] = useState(user.password);
+  const [email, setEmail] = useState(user.email);
+  const [phone, setPhone] = useState(user.phone);
 
   // For snakbar& Dialog
   function Alert(props) {
@@ -36,20 +40,18 @@ const UserProfile = () => {
   const handleSnackbarClose = () => {
     setSnackbarOpen(false);
   };
-
-  //  Fetch API
-  // useEffect(() => {
-  //   fetch("https://my-json-server.typicode.com/alaa-jamal/houseapi/users")
-  //     .then((response) => response.json())
-  //     .then((data) =>
-  //       setUser(data)
-
-  //     )
-  //     .catch((error) => {
-  //       console.error("Error fetching data:", error);
-  //     });
-  // }, []);
-  // console.log(user,8888);
+  const handleName = (e) => {
+    setName(e.target.value);
+  };
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  };
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  };
+  const handlePhone = (e) => {
+    setPhone(e.target.value);
+  };
 
   useEffect(() => {
     async function getUserData() {
@@ -58,14 +60,13 @@ const UserProfile = () => {
           "https://my-json-server.typicode.com/alaa-jamal/houseapi/users"
         );
         const userData = await data.json();
-        setUser(userData);
+        setUser(userData[0]);
       } catch (error) {
         console.error(error);
       }
     }
     getUserData();
   }, []);
-  console.log(user)
 
   return (
     <>
@@ -85,37 +86,37 @@ const UserProfile = () => {
           <Avatar src="/broken-image.jpg" />
 
           <TextField
-            autoFocus
-            value={"user[0].username"}
             label="UserName"
+            value={ name}
             type="text"
             fullWidth
-            defaultValue="Tasneem Jamal"
+            variant="outlined"
+            onChange={handleName}
           />
-          
+
           <TextField
             fullWidth
-            label="Pasword"
-            autoFocus
+            label="Password"
+            value={password}
             type="password"
-            value={"user[0].password"}
-            defaultValue={"*******"}
+            variant="outlined"
+            onChange={handlePassword}
           />
           <TextField
             fullWidth
             label="Email"
-            autoFocus
+            value={email}
+            variant="outlined"
             type="email"
-            value={"user[0].email"}
-            defaultValue={"tasneem@gmail.com"}
+            onChange={handleEmail}
           />
           <TextField
             fullWidth
+            variant="outlined"
             label="Phone"
-            autoFocus
+            value={phone}
             type="phone"
-            value={"user[0].phone"}
-            defaultValue={"0592258631"}
+            onChange={handlePhone}
           />
         </section>
 
