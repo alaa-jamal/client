@@ -262,7 +262,7 @@ const MyHouses = () => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title" className="alert-dialog-header-title">
+        <DialogTitle id="alert-dialog-title" className="alert-dialog-header-title" color={"white"}>
           {"Update House Information"}
         </DialogTitle>
         <DialogContent className="dialog-content">

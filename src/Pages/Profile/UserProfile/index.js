@@ -14,10 +14,10 @@ const UserProfile = () => {
   const [user, setUser] = useState([]);
   const [open, setOpen] = useState(false);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
-  const [name, setName] = useState(user.username);
-  const [password, setPassword] = useState(user.password);
-  const [email, setEmail] = useState(user.email);
-  const [phone, setPhone] = useState(user.phone);
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
 
   // For snakbar& Dialog
   function Alert(props) {
@@ -41,16 +41,20 @@ const UserProfile = () => {
     setSnackbarOpen(false);
   };
   const handleName = (e) => {
-    setName(e.target.value);
+    //  setName(user.username);
+   setName(e.target.value);
   };
   const handlePassword = (e) => {
-    setPassword(e.target.value);
+     setPassword(e.target.value);
+    //setPassword(user.password);
   };
   const handleEmail = (e) => {
     setEmail(e.target.value);
+      //setEmail(user.email);
   };
   const handlePhone = (e) => {
-    setPhone(e.target.value);
+     setPhone(e.target.value);
+    //setPhone(user.phone);
   };
 
   useEffect(() => {
@@ -87,17 +91,19 @@ const UserProfile = () => {
 
           <TextField
             label="UserName"
-            value={ name}
+            // value={name}
+            value={user.username? user.username : name}
             type="text"
             fullWidth
-            variant="outlined"
+             variant="outlined"
             onChange={handleName}
           />
 
           <TextField
             fullWidth
             label="Password"
-            value={password}
+              value={user.password? user.password : password}
+            //value={password}
             type="password"
             variant="outlined"
             onChange={handlePassword}
@@ -105,7 +111,8 @@ const UserProfile = () => {
           <TextField
             fullWidth
             label="Email"
-            value={email}
+             value={user.email? user.email : email}
+            //value={email}
             variant="outlined"
             type="email"
             onChange={handleEmail}
@@ -114,7 +121,8 @@ const UserProfile = () => {
             fullWidth
             variant="outlined"
             label="Phone"
-            value={phone}
+             value={user.phone? user.phone : phone}
+           // value={phone}
             type="phone"
             onChange={handlePhone}
           />

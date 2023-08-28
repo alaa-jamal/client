@@ -12,8 +12,16 @@ import "./style.css";
 
 const LoginPopup = () => {
   const [isOpen, setIsOpen] = useState(true);
+  const [userlog,setUSerlog] =useState("");
+  const[passlog,setPasslog]=useState("");
   const handleClose = () => {
     setIsOpen(false);
+  };
+  const handelUserName= (event) => {
+    setUSerlog(event.target.value);
+  };
+  const handelUserPassword= (event) => {
+    setPasslog(event.target.value);
   };
 
   return (
@@ -37,6 +45,7 @@ const LoginPopup = () => {
                 placeholder="Enter User Name"
                 type="text"
                 fullWidth
+                onChange={handelUserName}
               />
               <TextField
                 className="username-filed"
@@ -44,6 +53,7 @@ const LoginPopup = () => {
                 placeholder="Enter Password"
                 type="password"
                 fullWidth
+                onChange={handelUserPassword}
               />
                 <section className="section-log-btn">
 

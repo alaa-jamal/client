@@ -89,11 +89,15 @@ const AddHouse = () => {
 
   const houses = {
     title: title,
+    Description: Description,
+    address: address,
     price: price,
+    type:type,
     bathroom: bathroom,
     bedroom: bedroom,
-    address: address,
-    Description: Description,
+    selectedPhoto:selectedPhoto,
+    
+    
   };
 
   // const fetchData={
