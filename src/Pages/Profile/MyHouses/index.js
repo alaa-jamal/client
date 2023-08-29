@@ -1,97 +1,89 @@
 import React, { useEffect, useState } from "react";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogTitle from "@mui/material/DialogTitle";
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import Typography from "@mui/material/Typography";
-import houseImg from "../../../Utilis/images/house1.jpeg";
-import HotelIcon from "@mui/icons-material/Hotel";
-import BathtubIcon from "@mui/icons-material/Bathtub";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import ModeEditIcon from '@mui/icons-material/ModeEdit';
-import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
-import houseImg2 from  "../../../Utilis/images/house2.jpeg";
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import Snackbar from '@mui/material/Snackbar';
-import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
-import MuiAlert from '@mui/material/Alert';
+import NewCard from "../../../Components/NewCard";
+// import Dialog from "@mui/material/Dialog";
+// import DialogActions from "@mui/material/DialogActions";
+// import DialogTitle from "@mui/material/DialogTitle";
+// import DialogContent from '@mui/material/DialogContent';
+// import DialogContentText from '@mui/material/DialogContentText';
+// import Typography from "@mui/material/Typography";
+// import houseImg from "../../../Utilis/images/house1.jpeg";
+// import HotelIcon from "@mui/icons-material/Hotel";
+// import BathtubIcon from "@mui/icons-material/Bathtub";
+// import LocationOnIcon from "@mui/icons-material/LocationOn";
+// import ModeEditIcon from '@mui/icons-material/ModeEdit';
+// import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+// import houseImg2 from  "../../../Utilis/images/house2.jpeg";
+// import Button from '@mui/material/Button';
+// import TextField from '@mui/material/TextField';
+// import Box from '@mui/material/Box';
+// import InputLabel from '@mui/material/InputLabel';
+// import MenuItem from '@mui/material/MenuItem';
+// import FormControl from '@mui/material/FormControl';
+// import Select from '@mui/material/Select';
+// import Snackbar from '@mui/material/Snackbar';
+// import IconButton from '@mui/material/IconButton';
+// import CloseIcon from '@mui/icons-material/Close';
+// import MuiAlert from '@mui/material/Alert';
 
 
 import "./style.css";
 
 const MyHouses = () => {
-
-  // For Dialog
-
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
+    // const [titel, setTitel] = useState("");
+    // const [description,setDescription]=useState("");
+    // const [location, setLocation] = useState('');
+    // const [type, setType] = useState('');
+    // const [price, setPrice] = useState("");
+    // const [bedroom, setBedroom] = useState("");
+    // const [bathroom, setBathroom] = useState("");
+    // const [open, setOpen] = React.useState(false);   // For Dialog
+    const [house, setHouse] = useState([]);
 
 
 
-  // For Select location 
-  const [location, setLocation] = useState('');
-  const [type, setType] = useState('For');
-  const [price, setPrice] = useState("200$");
-  const [bedroom, setBedroom] = useState("");
-  const [bathroom, setBathroom] = useState("");
+  //   const handleChangeTitle = (event) => {
+  //     setTitel(event.target.value);
+  //   };
+  //   const handleChangeDescription = (event) => {
+  //     setDescription(event.target.value);
+  //   };
+  //   const handleChangeLocation = (event) => {
+  //     setLocation(event.target.value);
+  //   };
   
+  //   const handleChangeType = (event) => {
+  //     setType(event.target.value);
+  //   };
+  
+  //   const handleChangePrice = (event) => {
+  //     setPrice(event.target.value);
+  //   };
+  
+  //   const handleChangeBedroom=(event)=>{
+  //     setBedroom(event.target.value);
+  
+  //   }
+  
+  //   const handleChangeBathroom=(event)=>{
+  //     setBathroom(event.target.value);
+  
+  //   }
 
-  const handleChangeLocation = (event) => {
-    setLocation(event.target.value);
-  };
+  // const handleClickOpen = () => {
+  //   setOpen(true);
+  // };
 
-  const handleChangeType = (event) => {
-    setType(event.target.value);
-  };
-
-  const handleChangePrice = (event) => {
-    setPrice(event.target.value);
-  };
-
-  const handleChangeBedroom=(event)=>{
-    setBedroom(event.target.value);
-
-  }
-
-  const handleChangeBathroom=(event)=>{
-    setBathroom(event.target.value);
-
-  }
-
-
-  // For snakbar 
-
- 
-
- 
-
-
-
-
-
-
-  //1) initial value
-  const [house, setHouse] = useState([]);
+  // const handleClose = () => {
+  //   setOpen(false);
+  // };
+  
   //2) Use Effect
   useEffect(() => {
-    fetch("https://my-json-server.typicode.com/alaa-jamal/houseapi/users")
+    fetch("https://my-json-server.typicode.com/alaa-jamal/houseapi/houses")
       .then((response) => response.json())
       .then((data) => {
+        // data.length=2;
+       
         setHouse(data);
       })
       .catch((error) => {
@@ -99,13 +91,23 @@ const MyHouses = () => {
       });
   }, []);
 
-
+  console.log(house,77777);
+  
+  
+ 
 
 
 
   return (
     <>
-      <section className="myHouses">
+
+    {  house.slice(0, 2).map((house) => (
+          <NewCard house={house}  />
+        ))}
+
+    {/* {<NewCard house={house} />}
+    {<NewCard house={house} />} */}
+      {/* <section className="myHouses">
         <section className="myHouses-img">
           <img src={houseImg} />
         </section>
@@ -229,7 +231,7 @@ const MyHouses = () => {
                 color="#646464"
                 fontSize="0.8rem"
               >
-                Rafah-Palestine
+                {house.location}
               </Typography>
             </section>
 
@@ -254,8 +256,8 @@ const MyHouses = () => {
 
             
         </section>
-      </section>
-
+      </section> */}
+{/* 
       <Dialog
         open={open}
         onClose={handleClose}
@@ -402,7 +404,7 @@ const MyHouses = () => {
             Cancel
           </Button>
         </DialogActions>
-      </Dialog>
+      </Dialog> */}
 
 
      

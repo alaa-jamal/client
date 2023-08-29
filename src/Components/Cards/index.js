@@ -59,6 +59,9 @@ export default function HouseCard({house}) {
             />
           )}
         </section>
+        <section className="house-type">
+         { house.for}
+        </section>
        
       <CardContent class="card-content">
         <section class="card-content-top">

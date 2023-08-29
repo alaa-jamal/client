@@ -91,3 +91,16 @@
     color:#1B4289;
 }
 
+.house-type {
+    position: absolute;
+    top: 180px;
+    width: 64px;
+    text-align: center;
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    left: 16px;
+    color:#04266D;
+    font-size:1rem;
+}
+

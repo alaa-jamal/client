@@ -2,6 +2,7 @@ import React from 'react';
 import HouseCard from '../Cards';
 
 
+
 const CardContainer = ({houses})=>{
     return(
         <>

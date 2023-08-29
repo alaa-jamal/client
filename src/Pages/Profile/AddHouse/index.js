@@ -26,6 +26,7 @@ const AddHouse = () => {
   const [Description, setDescription] = useState("");
   const [type, setType] = useState("");
 
+
   const handleChangeTitle = (event) => {
     setTitle(event.target.value);
   };
@@ -86,6 +87,18 @@ const AddHouse = () => {
     const file = event.target.files[0];
     setSelectedPhoto(file);
   };
+  
+ const clear = ()=>{
+  setTitle("");
+  setDescription("");
+  setBedrooms('');
+  setBathrooms("");
+  setPrice("");
+  setSelectedPhoto("");
+  setType("");
+  setAddress("");
+ }
+
 
   const houses = {
     title: title,
@@ -127,7 +140,9 @@ const AddHouse = () => {
     )
       .then((response) => response.json())
       .then((data) => {
+        clear();
         setSnackbarOpen(true);
+        
         console.log("Success:", data);
         handleClose();
       })

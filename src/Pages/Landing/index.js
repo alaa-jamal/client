@@ -17,7 +17,7 @@ const Landing = () => {
     fetch("https://my-json-server.typicode.com/alaa-jamal/houseapi/houses")
       .then((response) => response.json())
       .then((data) => {
-        
+        data.length=6;
         setHouse(data);
       })
       .catch((error) => {
@@ -74,14 +74,14 @@ const Landing = () => {
           <section className="card-conatiner">
            
             {/* <CardContainer houses={houses} /> */}
-            {/* <CardContainer houses={houses} /> */}
-             { houses && houses.length > 0 ? ( 
+            <CardContainer houses={houses} />
+             {/* { houses && houses.length > 0 ? ( 
         houses.slice(0, 6).map((house) => (
           <HouseCard house={house} />
         ))
       ) : (
         <p>Loading</p>
-      )}  
+      )}   */}
   
             
           </section>

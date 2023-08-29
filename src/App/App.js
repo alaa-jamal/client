@@ -9,18 +9,18 @@ import UserProfile from '../Pages/Profile/UserProfile';
 function App() {
   return (
     <Layout>
-    
-        <Routes>
+{/*     
+         <Routes>
           <Route path="/" element={<Landing/>}/>
           <Route path="/aboutus" element={<AboutUs/>}/>
           <Route path ="/details/:id" element ={<Details/>}/>
           <Route path ="/filter" element ={<Filter/>}/> 
           <Route path ="*" element={<NotFound/>}/>
-        </Routes>
+        </Routes>  */}
 
-          
+  
 
-        {/* <Profile/> */}
+        <Profile/>
 
       {/* <Landing/> */}
       {/* <Details/> */}
