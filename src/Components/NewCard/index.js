@@ -45,28 +45,28 @@ const NewCard = ({ house }) => {
   const [openDialoge, setOpenDialoge] = useState(false);
   const [openSnackbarDelete, setOpenSnackbarDelete] = useState(false);
 
+  // /open edit dialog
   const handleClickOpen = () => {
     setOpen(true);
   };
+  //close edit
+  const handleCancel = () => {
+    setOpen(false);
+    setOpenDialoge(false);
+  };
 
-  const handleClose = () => {
+  //agree edit dialog
+  const handleCloseAgree = () => {
     setOpen(false);
     setOpenSnackbar(true);
   };
 
+  //open delete
   const handleClickOpenDialog = () => {
     setOpenDialoge(true);
   };
 
-  const handleCloseDialog = () => {
-    setOpenDialoge(false);
-    setOpenSnackbarDelete(true);
-  };
-
-  const handleAgree = () => {
-    setOpen(false);
-    setOpenSnackbar(true);
-  };
+  
 
   const handleAgreeDelete = () => {
     setOpenDialoge(false);
@@ -86,6 +86,7 @@ const NewCard = ({ house }) => {
     }
     setOpenSnackbarDelete(false);
   };
+
 
   const handleChangeTitle = (event) => {
     setTitelHouse(event.target.value);
@@ -188,9 +189,11 @@ const NewCard = ({ house }) => {
         </section>
       </section>
 
+      {/* edit Dialog */}
+
       <Dialog
         open={open}
-        onClose={handleClose}
+        onClose={handleCancel}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
@@ -295,21 +298,23 @@ const NewCard = ({ house }) => {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button className="save-btn" onClick={handleClose}>
+          <Button className="save-btn" onClick={handleCloseAgree}>
             Save
           </Button>
-          <Button className="cancel-btn" onClick={handleClose} autoFocus>
+          <Button className="cancel-btn" onClick={handleCancel} autoFocus>
             Cancel
           </Button>
         </DialogActions>
       </Dialog>
-      <Dialog open={openDialoge} onClose={handleCloseDialog}>
+
+      {/*  delete Dialog */}
+      <Dialog open={openDialoge} onClose={handleCancel}>
         <DialogTitle id="alert-dialog-title" className="dialogo-title">
           {"Are you sure to delete house?"}
         </DialogTitle>
         <DialogActions>
           <Button
-            onClick={handleClose}
+            onClick={handleCancel}
             className="disagree-btn"
             color="primary"
           >
