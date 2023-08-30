@@ -41,20 +41,19 @@ const UserProfile = () => {
     setSnackbarOpen(false);
   };
   const handleName = (e) => {
-    //  setName(user.username);
-    setName(e.target.value);
+    setName(e.target.value); 
   };
+
   const handlePassword = (e) => {
-    setPassword(e.target.value);
-    //setPassword(user.password);
+    setPassword(e.target.value); 
   };
+
   const handleEmail = (e) => {
-    setEmail(e.target.value);
-    //setEmail(user.email);
+    setEmail(e.target.value); 
   };
+
   const handlePhone = (e) => {
-    setPhone(e.target.value);
-    //setPhone(user.phone);
+    setPhone(e.target.value); 
   };
 
   useEffect(() => {
@@ -65,12 +64,16 @@ const UserProfile = () => {
         );
         const userData = await data.json();
         setUser(userData[0]);
+        setName(userData[0].username);
+        setPassword(userData[0].password);
+        setEmail(userData[0].email);
+        setPhone(userData[0].phone);
       } catch (error) {
         console.error(error);
       }
     }
     getUserData();
-  },);
+  }, []);
 
   return (
     <>
@@ -86,29 +89,21 @@ const UserProfile = () => {
             User Information
           </Typography>
 
-          {/* <Avatar alt="personal Img" src={user[0].image} /> */}
-          <Avatar  className = "user-info-img"src="/broken-image.jpg" />
+          <Avatar className="user-info-img" src="/broken-image.jpg" />
 
           <TextField
             label="UserName"
-            id="outlined-basic"
-            // value={name}
-           
-            defaultValue={"Alaa"}
-            value={user.username}
+            value={name}
             type="text"
             fullWidth
             variant="outlined"
             onChange={handleName}
           />
 
-
-
           <TextField
             fullWidth
             label="Password"
-            value={user.password ? user.password : password}
-            // value={password}
+            value={password}
             type="password"
             variant="outlined"
             onChange={handlePassword}
@@ -116,8 +111,7 @@ const UserProfile = () => {
           <TextField
             fullWidth
             label="Email"
-            value={user.email ? user.email : email}
-            //value={email}
+            value={email}
             variant="outlined"
             type="email"
             onChange={handleEmail}
@@ -126,8 +120,7 @@ const UserProfile = () => {
             fullWidth
             variant="outlined"
             label="Phone"
-            value={user.phone ? user.phone : phone}
-            // value={phone}
+            value={phone}
             type="phone"
             onChange={handlePhone}
           />
@@ -170,10 +163,11 @@ const UserProfile = () => {
               Update Successful!
             </MuiAlert>
           </Snackbar>
-        </section>
-      </section>
+        </section>      </section>
     </>
   );
 };
 
 export default UserProfile;
+
+ 
