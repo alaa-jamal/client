@@ -13,14 +13,14 @@ Create an application that displays many homes to make it easier for the user to
 
 ## User Stories :memo:
 ***As a user:***
-* I can Sign up into the website 
-* I can log in into the website 
-* I can see all available houses for (rent or sale)
-* I can see more details about house
-* I want to search about house by different  category like (Title ,locations, prices and the number of room)
-* I can add houses to my favourite list
-* I need to create/update my own profile
-* I need control panel to manage my houses
+1
+1) I can Sign up and log in  into the website 
+2) I can see all available houses for (rent or sale)
+3) I can see more details about house
+4)I want to search about house by different  category like (Title ,locations, prices and the number of room)
+5) I can add houses to my favourite list
+6) I need to create/update my own profile
+7) I need control panel to manage my houses
 
   ## User Journey :airplane:
   As a user, I can see all available different type (rent/sale )for house  in addition to different search about house like (search by number of rooms, location ,price) and I can add favourite house to my favorite list . when I login in the website I have control panel to edit my personal information and list of my houses .
@@ -42,5 +42,5 @@ Create an application that displays many homes to make it easier for the user to
 ### Lead Mentor :sunglasses:
 Yasmeen Attallah 
 
-### Team Members :busts_in_silhouette:
+
 Alaa Al-Hamami
