@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# House Hunting Project :house_with_garden:
+house-hunting  website that facilitates to access and rent available homes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live demo :tv: 
+---------
 
-## Available Scripts
 
-In the project directory, you can run:
+## Main problem :eyes:
+Most of those who want to search for a home find it very difficult to find what suits them at a price commensurate with their capabilities.
 
-### `npm start`
+## Solution :bulb:
+Create an application that displays many homes to make it easier for the user to search for a house for sale or rent.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## User Stories :memo:
+***As a user:***
+1
+1) I can Sign up and log in  into the website 
+2) I can see all available houses for (rent or sale)
+3) I can see more details about house
+4)I want to search about house by different  category like (Title ,locations, prices and the number of room)
+5) I can add houses to my favourite list
+6) I need to create/update my own profile
+7) I need control panel to manage my houses
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  ## User Journey :airplane:
+  As a user, I can see all available different type (rent/sale )for house  in addition to different search about house like (search by number of rooms, location ,price) and I can add favourite house to my favorite list . when I login in the website I have control panel to edit my personal information and list of my houses .
 
-### `npm test`
+  ## Prototype :art:
+[Figma Link](https://www.figma.com/file/SzI64kKql5LrnPJzlK0Ajs/House-Hunting?type=design&node-id=0-1&mode=design&t=sB4MX8VUto2sEpbd-0)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies :desktop_computer:
 
-### `npm run build`
+#### As a UI/UX Designer :
+- Figma
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### As a Front-end Technology:
+- ReactJS (Hooks).
+- Material UI
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Lead Mentor :sunglasses:
+Yasmeen Attallah 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## By:
+Alaa Al-Hamami
