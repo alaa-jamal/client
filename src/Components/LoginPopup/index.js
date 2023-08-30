@@ -12,15 +12,15 @@ import "./style.css";
 
 const LoginPopup = () => {
   const [isOpen, setIsOpen] = useState(true);
-  const [userlog,setUSerlog] =useState("");
-  const[passlog,setPasslog]=useState("");
+  const [userlog, setUSerlog] = useState("");
+  const [passlog, setPasslog] = useState("");
   const handleClose = () => {
     setIsOpen(false);
   };
-  const handelUserName= (event) => {
+  const handelUserName = (event) => {
     setUSerlog(event.target.value);
   };
-  const handelUserPassword= (event) => {
+  const handelUserPassword = (event) => {
     setPasslog(event.target.value);
   };
 
@@ -39,7 +39,6 @@ const LoginPopup = () => {
                 Welcome To Houses Website
               </DialogContentText>
               <TextField
-            
                 className="username-filed"
                 margin="dense"
                 placeholder="Enter User Name"
@@ -55,27 +54,16 @@ const LoginPopup = () => {
                 fullWidth
                 onChange={handelUserPassword}
               />
-                <section className="section-log-btn">
-
+              <section className="section-log-btn">
                 <Button className="log-btn" onClick={handleClose}>
-                Sign In
-              </Button>
-
-             
-              
-                </section>
-                <Typography
-                className="text-signup"
-                variant="p"
-                component="p"
-              >
+                  Sign In
+                </Button>
+              </section>
+              <Typography className="text-signup" variant="p" component="p">
                 Not a member ? Sign Up
               </Typography>
             </DialogContent>
-            <DialogActions>
-              
-           
-            </DialogActions>
+            <DialogActions></DialogActions>
           </section>
         </section>
       </Dialog>

@@ -42,18 +42,18 @@ const UserProfile = () => {
   };
   const handleName = (e) => {
     //  setName(user.username);
-   setName(e.target.value);
+    setName(e.target.value);
   };
   const handlePassword = (e) => {
-     setPassword(e.target.value);
+    setPassword(e.target.value);
     //setPassword(user.password);
   };
   const handleEmail = (e) => {
     setEmail(e.target.value);
-      //setEmail(user.email);
+    //setEmail(user.email);
   };
   const handlePhone = (e) => {
-     setPhone(e.target.value);
+    setPhone(e.target.value);
     //setPhone(user.phone);
   };
 
@@ -92,17 +92,17 @@ const UserProfile = () => {
           <TextField
             label="UserName"
             // value={name}
-            value={user.username? user.username : name}
+            value={user.username ? user.username : name}
             type="text"
             fullWidth
-             variant="outlined"
+            variant="outlined"
             onChange={handleName}
           />
 
           <TextField
             fullWidth
             label="Password"
-              value={user.password? user.password : password}
+            value={user.password ? user.password : password}
             //value={password}
             type="password"
             variant="outlined"
@@ -111,7 +111,7 @@ const UserProfile = () => {
           <TextField
             fullWidth
             label="Email"
-             value={user.email? user.email : email}
+            value={user.email ? user.email : email}
             //value={email}
             variant="outlined"
             type="email"
@@ -121,8 +121,8 @@ const UserProfile = () => {
             fullWidth
             variant="outlined"
             label="Phone"
-             value={user.phone? user.phone : phone}
-           // value={phone}
+            value={user.phone ? user.phone : phone}
+            // value={phone}
             type="phone"
             onChange={handlePhone}
           />

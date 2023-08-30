@@ -4,11 +4,10 @@
   --text-color: #626687;
 }
 
-body{
-  font-family: 'Bree Serif', serif;
+body {
+  font-family: "Bree Serif", serif;
 }
 
-/* hero section */
 .hero-section {
   display: flex;
   height: 100vh;
@@ -21,17 +20,16 @@ body{
   justify-content: center;
   padding-left: 6rem;
   line-height: 2rem;
-  
 }
 
 .hero-title1 {
   color: var(--primary-color);
 
-  font-family: 'Bree Serif', serif !important;
+  font-family: "Bree Serif", serif !important;
 }
 .hero-title2 {
   color: var(--secondary-color);
-  font-family: 'Bree Serif', serif !important;
+  font-family: "Bree Serif", serif !important;
 }
 
 .hero-subtitle {
@@ -63,7 +61,7 @@ body{
 .serach-btn {
   position: absolute;
   border: none;
-  height: 35px ;
+  height: 35px;
   left: 369px !important;
   top: 22px !important;
   border-radius: 50px;
@@ -73,17 +71,14 @@ body{
   color: #1b4289;
 }
 
-
-/* Newest Section */
 .newest-houses {
   background-color: #fbfbfb;
-  /* height: 220vh; */
   position: relative;
 }
 .newest-houses-title {
   padding: 50px 0px 100px 100px;
   color: #1b4289;
-  font-family: 'Bree Serif', serif !important;
+  font-family: "Bree Serif", serif !important;
 }
 
 .new {

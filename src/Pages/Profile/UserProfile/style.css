@@ -1,113 +1,85 @@
-.userInformation{
-    border:1px solid #cac8c8;
-    border-radius: 5px;
-    width:60vw;
-    
-    
-  
-} 
-
+.userInformation {
+  border: 1px solid #cac8c8;
+  border-radius: 5px;
+  width: 60vw;
+}
 
 .css-wb57ya-MuiFormControl-root-MuiTextField-root {
-  
-    width: 80% !important;
+  width: 80% !important;
 }
 
 .css-19kzrtu {
-    padding: 0px !important;
- 
+  padding: 0px !important;
 }
 
-
-
-.save-edit{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-    
+.save-edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.save-edit-btn{
-    width:7vw;
-    height:50px;
-    background-color: #FED047;
-    margin: 10px 0px;
-    border:none;
-    border-radius: 5px;
-    color:#1B4289;
-    font-family: 'Bree Serif', serif;
-    font-size: 1.2rem;
+.save-edit-btn {
+  width: 7vw;
+  height: 50px;
+  background-color: #fed047;
+  margin: 10px 0px;
+  border: none;
+  border-radius: 5px;
+  color: #1b4289;
+  font-family: "Bree Serif", serif;
+  font-size: 1.2rem;
 }
 
 .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
-   
-    margin: 10px !important;
-   
-  
-   
-  
+  margin: 10px !important;
 }
 
-
-.userInfo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center ;
-    margin-top: 20px;
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root {
-  
-    width: 100% ;
-    margin-bottom: 20px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-#alert-dialog-title{
-    color:#1B4289 !important;
-    font-size: 0.9rem !important;
+#alert-dialog-title {
+  color: #1b4289 !important;
+  font-size: 0.9rem !important;
 }
 
-.disagree-btn{
-    color:red !important;
-    font-size: 0.7rem !important;
+.disagree-btn {
+  color: red !important;
+  font-size: 0.7rem !important;
 }
 
-.agree-btn{
-    color:green !important;
-    font-size: 0.7rem !important;
+.agree-btn {
+  color: green !important;
+  font-size: 0.7rem !important;
 }
 
-.user-info-title{
-    font-family: 'Bree Serif', serif !important;
-    padding-bottom:20px !important;
-}
-
-/* .css-1wlk0hk-MuiAvatar-root {
-    width: 100px !important;
-    height: 100px !important;
-}   */
-   
-.css-2s90m6-MuiAvatar-root{
-    width: 100px !important;
-    height: 100px !important;
-
+.user-info-title {
+  font-family: "Bree Serif", serif !important;
+  padding-bottom: 20px !important;
 }
 
 .css-2s90m6-MuiAvatar-root {
+  width: 100px !important;
+  height: 100px !important;
+}
 
-    background-color:#1B4289 !important;
-
+.css-2s90m6-MuiAvatar-root {
+  background-color: #1b4289 !important;
 }
 
 .css-10mi8st-MuiSvgIcon-root-MuiAvatar-fallback {
-  color:#FED047 !important;
+  color: #fed047 !important;
 }
 
 .dialogo-title {
-    font-size: 0.9rem !important;
-   
+  font-size: 0.9rem !important;
 }
-
-

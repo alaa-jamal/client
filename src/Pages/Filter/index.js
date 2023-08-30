@@ -1,23 +1,22 @@
 import React, { useState, useEffect } from "react";
-// import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import { CardContainer } from "../../Components";
 import TextField from "@mui/material/TextField";
- import Slider from "@mui/material/Slider"
+import Slider from "@mui/material/Slider";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import Typography from "@mui/material/Typography";
-import Container from '@mui/material/Container';
-
+import Container from "@mui/material/Container";
 import "./style.css";
 
 const Filter = () => {
   // initail Value
   const [houses, setHouse] = useState([]);
-  const [location, setLocation] = useState('');
-  const [type, setType] = useState('');
+  const [location, setLocation] = useState("");
+  const [type, setType] = useState("");
   const [room, setRoom] = useState(0);
+  const [title, setTitle] = useState("");
   const minPrice = 0;
   const maxPrice = 450;
   const [price, setPrice] = useState();
@@ -40,7 +39,9 @@ const Filter = () => {
     setPrice(newValue);
   };
 
-  
+  const handleChangeTitle = (event) => {
+    setTitle(event.target.value);
+  };
 
   // Fetch all houses from API
   useEffect(() => {
@@ -55,69 +56,21 @@ const Filter = () => {
       });
   }, []);
 
-  // Fetch  for filter category (location):
-  // useEffect(() => {
-  //     fetch("https://my-json-server.typicode.com/alaa-jamal/houseapi/location")
-  //       .then((response) => response.json())
-  //       .then((data) => {
-  //         setLocation(data);
-  //         // console.log(location);
-  //       })
-  //       .catch((error) => {
-  //         console.error("Error fetching data:", error);
-  //       });
-  //   }, []);
-
-  // console.log(houses[0].city);
-  // if(houses[0].city===location){
-  //   console.log("correct location")
-  // }else{
-  //   console.log("error location")
-  // }
-  // const filterCategory = [location,type]
-
   const handleFilter = (event) => {
     event.preventDefault();
 
-         // return ((house.city === location)||
-      //        (house.bedroom === +room) ||
-      //        (house.price === price))
-
-     
-    //  (!location || house.city === location) &&
-    // (!room || house.bedroom === parseInt(room)) &&
-    // (!price || house.price <= parseInt(price));
-    // return(
-
-      //   // ((house.city === location) ||(house.bedroom === +room)||(house.price === price))||
-      //   // ((house.city === location) &&(house.bedroom === +room))
-
-
-
-
-
-      // )
-            
-            //  (house.city ===location && house.bedroom===room)
-            //  ;
-
-    
-      
-  //  return ((house.city === location))
-
     let filterResult = houses
-  
-      .filter((house) => (!location ? true :house.city === location ))
-      .filter((house) => ( house.for.toLowerCase().includes(type.toLowerCase())))
-      .filter((house) => (!room ? true : house.bedroom === parseInt(room)))
-      .filter((house) => (!price ? true : house.price === parseInt(price)));
 
-     setFilter(filterResult);
-     console.log(filterResult);
-    console.log("hi from filter page");
+      .filter((house) => (location ? house.city === location : true))
+      .filter((house) =>
+        house.title.toLowerCase().includes(title.toLowerCase())
+      )
+      .filter((house) => (room ? house.bedroom === parseInt(room) : true))
+      .filter((house) => (type ? house.for === type : true))
+      .filter((house) => (price ? house.price === parseInt(price) : true));
+
+    setFilter(filterResult);
   };
-
-  
 
   return (
     <>
@@ -126,8 +79,8 @@ const Filter = () => {
           <input
             className="filter-searchInput"
             type="search"
-            placeholder="Search for the location you want!"
-            onChange={handleChangeType}
+            placeholder="Search for the Title you want!"
+            onChange={handleChangeTitle}
           />
           <button className="filter-serach-btn" onClick={handleFilter}>
             Search
@@ -147,23 +100,13 @@ const Filter = () => {
               autoWidth
               label="location"
             >
-              {/* {console.log(location)} */}
-              {/* {location.map((option) => 
-            <MenuItem key={option.city} value={option.city}>
-              {option.city}
-            </MenuItem>
-          
-)} */}
               <MenuItem value={"Gaza"}>Gaza</MenuItem>
               <MenuItem value={"Rafah"}>Rafah</MenuItem>
               <MenuItem value={"Khanyunis"}>Khanyunis</MenuItem>
-
-              {/* //  {console.log(option)} // array
-          //  {console.log(option.city)} // khanyouis ,gaza,rafah */}
             </Select>
           </FormControl>
 
-          {/* <FormControl sx={{ m: 1, minWidth: 120 }}>
+          <FormControl sx={{ m: 1, minWidth: 120 }}>
             <InputLabel id="demo-simple-select-autowidth-label">For</InputLabel>
             <Select
               labelId="demo-simple-select-autowidth-label"
@@ -173,11 +116,11 @@ const Filter = () => {
               autoWidth
               label="For"
             >
-              <MenuItem value={"Rent"}>Rent</MenuItem>
-              <MenuItem value={"Sale"}>Sale</MenuItem>
+              <MenuItem value={"rent"}>rent</MenuItem>
+              <MenuItem value={"sale"}>sale</MenuItem>
             </Select>
-          </FormControl> */}
-          <TextField 
+          </FormControl>
+          <TextField
             id="outlined-Bedroom-input"
             label="Room"
             type="number"
@@ -186,91 +129,46 @@ const Filter = () => {
             onChange={handleChangeRoom}
           />
 
-           <FormControl sx={{ m: 1, minWidth: 120 }}>
-            <InputLabel id="demo-simple-select-autowidth-label">
-              Room
-            </InputLabel>
-            <Select
-              labelId="demo-simple-select-autowidth-label"
-              id="demo-simple-select-autowidth"
-              value={room}
-              onChange={handleChangeRoom}
-              autoWidth
-              label="For"
-            >
-              <MenuItem value={1}>1</MenuItem>
-              <MenuItem value={2}>2</MenuItem>
-              <MenuItem value={3}>3</MenuItem>
-              <MenuItem value={4}>4</MenuItem>
-              <MenuItem value={5}>5</MenuItem>
-            </Select>
-          </FormControl>
-
-
           <section>
             <Typography
-            variant="span"
-            component="span"
-            color="#888B97"
-            textAlign="center"
-            
-            
-            >Price</Typography>
+              variant="span"
+              component="span"
+              color="#888B97"
+              textAlign="center"
+            >
+              Price
+            </Typography>
             <Slider
               aria-label="Small"
               name="price"
               value={price}
               valueLabelDisplay="auto"
               aria-labelledby="range-slider"
-             
               min={minPrice}
               max={maxPrice}
               variant="outlined"
               style={{ width: "300%" }}
-              
-              
               onChange={handleChangePrice}
             />
           </section>
-
-
-
-
-{/*           
-      { type==="Rent"? console.log("hi"):console.log("error")}
-      { location==="Gaza"? console.log("hiGaza"):console.log("notfound")} */} 
-
-          {/* <Slider
-            getAriaLabel={() => "Price range"}
-            value={priceRangeValue}
-            onChange={handlePrice}
-            valueLabelDisplay=""
-            min={minmin}
-            max={maxmax}
-            style={{ width: "300%" }}
-          /> */}
         </section>
       </section>
-     
-     <Container  className="container-filter">
-     <Typography
+
+      <Container className="container-filter">
+        <Typography
           variant="h5"
           component="h4"
           color="#1B4289"
           textAlign="center"
         >
-           Houses Available : (
-           <span className="numOfHouse"> {filter.length} </span>
-)
+          Houses Available : (
+          <span className="numOfHouse"> {filter.length} </span>)
         </Typography>
-  
-     <section className="data-filter-section">
-    
-     
-        <CardContainer className='filter-container' houses={filter} />
-      </section>
-     </Container>
-     
+
+        <section className="data-filter-section">
+          <CardContainer className="filter-container" houses={filter} />
+        </section>
+      </Container>
     </>
   );
 };

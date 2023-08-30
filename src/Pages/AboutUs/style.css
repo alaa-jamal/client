@@ -1,15 +1,14 @@
-.about-section{
-    display: flex;
-    justify-content: space-around;
-    padding:30px;  
+.about-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
 }
 
-.about-section-right{
-    width:50%;  
-   
+.about-section-right {
+  width: 50%;
 }
 
-.about-section-left{
-    width:50%;
-    padding:30px;
+.about-section-left {
+  width: 50%;
+  padding: 30px;
 }

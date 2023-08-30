@@ -52,19 +52,18 @@
   text-transform: none !important;
 }
 
-.username-signup fieldset{
+.username-signup fieldset {
   display: none;
 }
 
-.email-signup fieldset{
+.email-signup fieldset {
   display: none;
 }
 
-.password-signup fieldset{
+.password-signup fieldset {
   display: none;
 }
 
-.phone-signup fieldset{
+.phone-signup fieldset {
   display: none;
 }
-

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import detailsImage from "../../Utilis/images/details-img.png";
 import Typography from "@mui/material/Typography";
 import PersonIcon from "@mui/icons-material/Person";
 import EmailIcon from "@mui/icons-material/Email";
@@ -14,12 +13,9 @@ import { useParams } from "react-router-dom";
 import "./style.css";
 
 const Details = () => {
-  //1)  initaial value
   let { id } = useParams();
   const [houses, setHouse] = useState([]);
 
-  // Fetch house details from API:
-  //2) Use Effect
   useEffect(() => {
     fetch(
       `https://my-json-server.typicode.com/alaa-jamal/houseapi/houses/${id}`
@@ -61,13 +57,13 @@ const Details = () => {
               </section>
               <section className="bath-icon">
                 <BathtubIcon className="icon" />
-                <Typography variant="p" component="p"  color="#646464">
+                <Typography variant="p" component="p" color="#646464">
                   {houses.bathroom}Baths
                 </Typography>
               </section>
               <section className="location-icon">
                 <LocationOnIcon className="icon" />
-                <Typography variant="p" component="p"  color="#646464">
+                <Typography variant="p" component="p" color="#646464">
                   {houses.city}
                 </Typography>
               </section>

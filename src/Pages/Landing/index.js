@@ -3,29 +3,24 @@ import heroImage from "../../Utilis/images/hero-img.png";
 import Typography from "@mui/material/Typography";
 import "@fontsource/roboto/500.css";
 import SearchIcon from "@mui/icons-material/Search";
-import { CardContainer, HouseCard } from "../../Components";
-import {Link} from 'react-router-dom';
+import { CardContainer } from "../../Components";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 const Landing = () => {
-  // Fetch houses from API
-  //1) initial value
   const [houses, setHouse] = useState([]);
-  // const [newHouses,setNewHouse]=useState([]);
-  //2) Use Effect
+
   useEffect(() => {
     fetch("https://my-json-server.typicode.com/alaa-jamal/houseapi/houses")
       .then((response) => response.json())
       .then((data) => {
-        data.length=6;
+        data.length = 6;
         setHouse(data);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
   }, []);
-
-  // Display newest House
 
   return (
     <>
@@ -49,8 +44,9 @@ const Landing = () => {
               placeholder="Search for the location you want!"
             />
             <button className="serach-btn">
-              <Link to ="/filter"><SearchIcon className="searchicon"></SearchIcon></Link>
-              
+              <Link to="/filter">
+                <SearchIcon className="searchicon"></SearchIcon>
+              </Link>
             </button>
           </form>
         </section>
@@ -69,21 +65,9 @@ const Landing = () => {
           >
             Newest Houses
           </Typography>
-         
 
           <section className="card-conatiner">
-           
-            {/* <CardContainer houses={houses} /> */}
             <CardContainer houses={houses} />
-             {/* { houses && houses.length > 0 ? ( 
-        houses.slice(0, 6).map((house) => (
-          <HouseCard house={house} />
-        ))
-      ) : (
-        <p>Loading</p>
-      )}   */}
-  
-            
           </section>
         </section>
       </section>
@@ -91,5 +75,3 @@ const Landing = () => {
   );
 };
 export default Landing;
-
-        

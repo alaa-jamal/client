@@ -25,7 +25,16 @@ const AddHouse = () => {
   const [address, setAddress] = useState("");
   const [Description, setDescription] = useState("");
   const [type, setType] = useState("");
-
+  const houses = {
+    title: title,
+    Description: Description,
+    address: address,
+    price: price,
+    type: type,
+    bathroom: bathroom,
+    bedroom: bedroom,
+    selectedPhoto: selectedPhoto,
+  };
 
   const handleChangeTitle = (event) => {
     setTitle(event.target.value);
@@ -60,9 +69,7 @@ const AddHouse = () => {
     setOpen(false);
 
     if (agree) {
-      // Open Snackbar
       setSnackbarOpen(true);
-      // Clear the text fields
       setTitle("");
       setPrice("");
       setBedrooms("");
@@ -70,7 +77,6 @@ const AddHouse = () => {
       setAddress("");
       setDescription("");
       setType("");
-      // Reset selected photo
       setSelectedPhoto(null);
     }
   };
@@ -87,45 +93,17 @@ const AddHouse = () => {
     const file = event.target.files[0];
     setSelectedPhoto(file);
   };
-  
- const clear = ()=>{
-  setTitle("");
-  setDescription("");
-  setBedrooms('');
-  setBathrooms("");
-  setPrice("");
-  setSelectedPhoto("");
-  setType("");
-  setAddress("");
- }
 
-
-  const houses = {
-    title: title,
-    Description: Description,
-    address: address,
-    price: price,
-    type:type,
-    bathroom: bathroom,
-    bedroom: bedroom,
-    selectedPhoto:selectedPhoto,
-    
-    
+  const clear = () => {
+    setTitle("");
+    setDescription("");
+    setBedrooms("");
+    setBathrooms("");
+    setPrice("");
+    setSelectedPhoto("");
+    setType("");
+    setAddress("");
   };
-
-  // const fetchData={
-  //   method: 'POST',
-  //   headers: {
-  //     'Content-Type': 'application/json',
-  //   },
-  //   body: JSON.stringify(houses),
-
-  // }
-
-  // fetch('https://my-json-server.typicode.com/alaa-jamal/add-house-api/houses',fetchData)
-  // .then(response => response.json())
-  // .then(data => console.log(data))
-  // .catch(error => console.log(error))
 
   const handelAddHouse = () => {
     fetch(
@@ -142,32 +120,12 @@ const AddHouse = () => {
       .then((data) => {
         clear();
         setSnackbarOpen(true);
-        
-        console.log("Success:", data);
         handleClose();
       })
       .catch((error) => {
         console.error("Error:", error);
       });
   };
-
-  // const  handelAddHouse = async  (e) => {
-  //   e.preventDefault();
-
-  //   try {
-  //     const response = await fetch('https://my-json-server.typicode.com/alaa-jamal/add-house-api/houses', {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //       },
-  //       body: JSON.stringify(houses),
-  //     });
-
-  //   }
-  //  catch (error) {
-
-  //   console.error('Error:', error);
-  // }}
 
   return (
     <>
@@ -274,12 +232,7 @@ const AddHouse = () => {
               />
             </section>
 
-            <input
-              type="file"
-              accept="image/*"
-              onChange={handlePhotoChange}
-              // style={{ marginTop: '10px' }}
-            />
+            <input type="file" accept="image/*" onChange={handlePhotoChange} />
             {selectedPhoto && (
               <div className="image-container" style={{ maxWidth: "100%" }}>
                 <img
@@ -326,7 +279,6 @@ const AddHouse = () => {
         </section>
       </section>
 
-      {/* Snackbar */}
       <Snackbar
         open={snackbarOpen}
         autoHideDuration={3000}

@@ -1,78 +1,66 @@
-.filter-section{
-    background-image: url(../../Utilis/images/filter-background.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height:70vh !important;
-    position:relative;
-    
+.filter-section {
+  background-image: url(../../Utilis/images/filter-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh !important;
+  position: relative;
 }
 
-.filter-search{
-    position: absolute;
-    top: 131px !important;
-    left: 387px !important;
-    
+.filter-search {
+  position: absolute;
+  top: 131px !important;
+  left: 387px !important;
 }
 
-.filter-searchInput{
-   
-    width: 40vw;
-    height:60px;
-    padding: 10px;
-    border-radius: 50px;
-    /* border: 2px solid #1b4189a0; */
-    border:none;
-    /* outline: none; */
+.filter-searchInput {
+  width: 40vw;
+  height: 60px;
+  padding: 20px;
+  border-radius: 50px;
 
-
-
+  border: none;
 }
-.filter-serach-btn{
-    position: absolute;
-    border: none;
-    height: 60px;
-    width: 104px;
-    left: 439px;
-    top: 0px;
-    border-radius: 50px;
-    background-color: #1B4289;
-    color: #FFFFFF;
-    cursor: pointer;
-    font-size: 19px;
+.filter-serach-btn {
+  position: absolute;
+  border: none;
+  height: 60px;
+  width: 104px;
+  left: 439px;
+  top: 0px;
+  border-radius: 50px;
+  background-color: #1b4289;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 19px;
 }
 
-.filter-section-bottom{
-    display: flex;
-   justify-content: space-evenly;
-    align-items: center;
-    width: 80%;
-    height: 122px;
-    background-color: #FFFFFF;
-    border-radius: 5px;
-    position: absolute;
-    bottom: -49px;
-    left: 133px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-   
+.filter-section-bottom {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  height: 122px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -49px;
+  left: 133px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
-.data-filter-section{
-    margin-top:80px;
-    background-color: #FFFFFF;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3px;
-    justify-content: space-around;
-
+.data-filter-section {
+  margin-top: 80px;
+  background-color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  justify-content: space-around;
 }
 
-.container-filter{
-    margin-top: 100px;
+.container-filter {
+  margin-top: 100px;
 }
 
-
-.numOfHouse{
-    color:#FED047;
+.numOfHouse {
+  color: #fed047;
 }
-

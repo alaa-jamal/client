@@ -2,24 +2,44 @@ import React, { useEffect, useState } from "react";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogTitle from "@mui/material/DialogTitle";
-
 import Typography from "@mui/material/Typography";
 import houseImg from "../../../Utilis/images/house1.jpeg";
 import HotelIcon from "@mui/icons-material/Hotel";
 import BathtubIcon from "@mui/icons-material/Bathtub";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
-import houseImg2 from  "../../../Utilis/images/house2.jpeg";
-import Button from '@mui/material/Button';
-import Snackbar from '@mui/material/Snackbar';
-import MuiAlert from '@mui/material/Alert';
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import houseImg2 from "../../../Utilis/images/house2.jpeg";
+import Button from "@mui/material/Button";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
 import "./style.css";
 
 const MyFavourite = () => {
-
-  //1) initial value
   const [house, setHouse] = useState([]);
-  //2) Use Effect
+  const [open, setOpen] = useState(false);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+
+  function Alert(props) {
+    return <MuiAlert elevation={6} variant="filled" {...props} />;
+  }
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleAgree = () => {
+    setOpen(false);
+    setSnackbarOpen(true);
+  };
+
+  const handleSnackbarClose = () => {
+    setSnackbarOpen(false);
+  };
+
   useEffect(() => {
     fetch("https://my-json-server.typicode.com/alaa-jamal/houseapi/users")
       .then((response) => response.json())
@@ -30,38 +50,6 @@ const MyFavourite = () => {
         console.error("Error fetching data:", error);
       });
   }, []);
-
-
-
-// For snakbar& Dialog
-function Alert(props) {
-    return <MuiAlert elevation={6} variant="filled" {...props} />;
-  }
-
-const [open, setOpen] = useState(false);
-const [snackbarOpen, setSnackbarOpen] = useState(false);
-
-const handleOpen = () => {
-  setOpen(true);
-};
-
-const handleClose = () => {
-  setOpen(false);
-};
-
-const handleAgree = () => {
-  setOpen(false);
-  setSnackbarOpen(true);
-};
-
-const handleSnackbarClose = () => {
-  setSnackbarOpen(false);
-};
-
-
-
-
-
 
   return (
     <>
@@ -81,20 +69,18 @@ const handleSnackbarClose = () => {
           </Typography>
 
           <section className="house-cards-icon">
-            <section className="beds-icon" >
+            <section className="beds-icon">
               <HotelIcon className="icon" />
-              <Typography 
-              
+              <Typography
                 variant="p"
                 component="p"
                 color="#646464"
                 fontSize="0.8rem"
               >
-                 2 beds
+                2 beds
               </Typography>
-             
             </section>
-            <section  className="baths-icon">
+            <section className="baths-icon">
               <BathtubIcon className="icon" />
               <Typography
                 variant="p"
@@ -106,7 +92,7 @@ const handleSnackbarClose = () => {
               </Typography>
             </section>
 
-            <section  className="locations-icon">
+            <section className="locations-icon">
               <LocationOnIcon className="icon" />
               <Typography
                 variant="p"
@@ -117,7 +103,6 @@ const handleSnackbarClose = () => {
                 Gaza-Palestine
               </Typography>
             </section>
-
           </section>
 
           <Typography
@@ -126,21 +111,16 @@ const handleSnackbarClose = () => {
             component="h6"
             marginTop={3}
             color={"#1B4289"}
-           className="myHouses-price"
+            className="myHouses-price"
           >
             300$/month
           </Typography>
         </section>
 
         <section className="myHouses-icons">
-
-           
-           < DeleteOutlineIcon className="delete-icon" onClick={handleOpen}/>
-
-            
+          <DeleteOutlineIcon className="delete-icon" onClick={handleOpen} />
         </section>
       </section>
-
 
       <section className="myHouses">
         <section className="myHouses-img">
@@ -154,24 +134,22 @@ const handleSnackbarClose = () => {
             component="h6"
             color="#1B4289"
           >
-           Studio House
+            Studio House
           </Typography>
 
           <section className="house-cards-icon">
-            <section className="beds-icon" >
+            <section className="beds-icon">
               <HotelIcon className="icon" />
-              <Typography 
-              
+              <Typography
                 variant="p"
                 component="p"
                 color="#646464"
                 fontSize="0.8rem"
               >
-                 1beds
+                1beds
               </Typography>
-             
             </section>
-            <section  className="baths-icon">
+            <section className="baths-icon">
               <BathtubIcon className="icon" />
               <Typography
                 variant="p"
@@ -183,7 +161,7 @@ const handleSnackbarClose = () => {
               </Typography>
             </section>
 
-            <section  className="locations-icon">
+            <section className="locations-icon">
               <LocationOnIcon className="icon" />
               <Typography
                 variant="p"
@@ -194,7 +172,6 @@ const handleSnackbarClose = () => {
                 Rafah-Palestine
               </Typography>
             </section>
-
           </section>
 
           <Typography
@@ -203,31 +180,27 @@ const handleSnackbarClose = () => {
             component="h6"
             marginTop={3}
             color={"#1B4289"}
-           className="myHouses-price"
+            className="myHouses-price"
           >
             100$/month
           </Typography>
         </section>
 
         <section className="myHouses-icons">
-
-           
-           < DeleteOutlineIcon className="delete-icon" onClick={handleOpen}/>
-
-            
+          <DeleteOutlineIcon className="delete-icon" onClick={handleOpen} />
         </section>
       </section>
 
-
-      {/* For Dialoge & Sanakbar */}
-
       <Dialog open={open} onClose={handleClose}>
-       
-      <DialogTitle id="alert-dialog-title">
+        <DialogTitle id="alert-dialog-title">
           {"Are you sure delete house from a Favourite List?"}
         </DialogTitle>
         <DialogActions>
-          <Button onClick={handleClose} className="disagree-btn" color="primary">
+          <Button
+            onClick={handleClose}
+            className="disagree-btn"
+            color="primary"
+          >
             Disagree
           </Button>
           <Button onClick={handleAgree} className="agree-btn" color="primary">
@@ -244,56 +217,8 @@ const handleSnackbarClose = () => {
           Deleted Successful!
         </MuiAlert>
       </Snackbar>
-    
-
-
-  
-
-
-
-   
-
-
-    
-
-    
-
-    
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-       
-
-
-     
-
-  
     </>
   );
-
-
- 
-
 };
 
 export default MyFavourite;

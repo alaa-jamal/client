@@ -1,106 +1,91 @@
-.house-card{
-    position: relative;
+.house-card {
+  position: relative;
 }
 
-
-.card-content-top{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    padding-left: 35px;
-
+.card-content-top {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-left: 35px;
 }
 
-.card-title,.card-price{
-    color:#04266D;
-    font-size:1.3rem; 
-    
+.card-title,
+.card-price {
+  color: #04266d;
+  font-size: 1.3rem;
 }
 
-.card-title{
-    max-width: 70%;
+.card-title {
+  max-width: 70%;
 }
 
-.card-price{
-    padding-right:35px;
+.card-price {
+  padding-right: 35px;
 }
 
-
-
-.card-image{
-    position: relative;
-
+.card-image {
+  position: relative;
 }
-.fav-card{
-    position: absolute;
-    background-color: #fed047;
-    width: 30px;
-    height: 30px;
-    top: 11px !important;
-    left: 299px !important;
-    border-radius: 50px;
-    
+.fav-card {
+  position: absolute;
+  background-color: #fed047;
+  width: 30px;
+  height: 30px;
+  top: 11px !important;
+  left: 299px !important;
+  border-radius: 50px;
 }
-.fav-card-icon{
-    position: absolute;
-    top: 4px;
-    left: 3px;
-    color:#1B4289;
-    
+.fav-card-icon {
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  color: #1b4289;
 }
 
-
-.card-description{
-    padding:1px 35px;
-    font-size:0.8rem;
-    color:#646464;
-    text-align: left;
-   
+.card-description {
+  padding: 1px 35px;
+  font-size: 0.8rem;
+  color: #646464;
+  text-align: left;
 }
 
-
-
-.cards-icon{
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 20px;
+.cards-icon {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
 }
 
-.icon{
-    color:#1B4289;
-    margin-top: 20px;
-  
-    
+.icon {
+  color: #1b4289;
+  margin-top: 20px;
 }
 
-.seeDetails-btn{
-
-    background-color: #FED047;
-    border:none;
-    border-radius: 50px;
-    color:#04266D;
-    padding:8px 19px;
-    margin: 0px auto 15px auto;  
-    text-decoration: none; 
-    font-size: 1.1rem;
-    font-family: 'Bree Serif', serif !important;
+.seeDetails-btn {
+  background-color: #fed047;
+  border: none;
+  border-radius: 50px;
+  color: #04266d;
+  padding: 8px 19px;
+  margin: 0px auto 15px auto;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-family: "Bree Serif", serif !important;
 }
 
-.seeDetails-btn-link{
-    text-decoration: none;
-    color:#1B4289;
+.seeDetails-btn-link {
+  text-decoration: none;
+  color: #1b4289;
 }
 
 .house-type {
-    position: absolute;
-    top: 180px;
-    width: 64px;
-    text-align: center;
-    padding: 5px;
-    background-color: #ffffff;
-    border-radius: 50px;
-    left: 16px;
-    color:#04266D;
-    font-size:1rem;
+  position: absolute;
+  top: 180px;
+  width: 64px;
+  text-align: center;
+  padding: 5px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  left: 16px;
+  color: #04266d;
+  font-size: 1rem;
 }
-
