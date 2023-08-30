@@ -70,7 +70,7 @@ const UserProfile = () => {
       }
     }
     getUserData();
-  }, []);
+  },[user]);
 
   return (
     <>
@@ -87,23 +87,28 @@ const UserProfile = () => {
           </Typography>
 
           {/* <Avatar alt="personal Img" src={user[0].image} /> */}
-          <Avatar src="/broken-image.jpg" />
+          <Avatar  className = "user-info-img"src="/broken-image.jpg" />
 
           <TextField
             label="UserName"
+            id="outlined-basic"
             // value={name}
-            value={user.username ? user.username : name}
+           
+            defaultValue={"Alaa"}
+            value={user.username}
             type="text"
             fullWidth
             variant="outlined"
             onChange={handleName}
           />
 
+
+
           <TextField
             fullWidth
             label="Password"
             value={user.password ? user.password : password}
-            //value={password}
+            // value={password}
             type="password"
             variant="outlined"
             onChange={handlePassword}

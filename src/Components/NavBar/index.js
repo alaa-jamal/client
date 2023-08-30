@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -13,9 +13,18 @@ import { Link } from "react-router-dom";
 import "@fontsource/roboto/400.css";
 import LoginPopup from "../LoginPopup";
 import SignPopup from "../SignUp";
+import Avatar from '@mui/material/Avatar';
+// import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
+import MenuItem from '@mui/material/MenuItem';
 import "./style.css";
+import AuthContext from '../Context/AuthContext';
+
+const settings = ['Profile', 'Logout'];
 
 function NavBar() {
+  const {isLoggedIn } = useContext(AuthContext);
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false);
@@ -128,7 +137,51 @@ function NavBar() {
               </Link>
             </Button>
           </Box>
-          <section className="header-right">
+          
+          {isLoggedIn ? (
+          
+          <Box sx={{ flexGrow: 0 }}>
+            <Tooltip title="Open settings">
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+              {/* <Avatar alt={users.username} />  */}
+              {/* Use userData to display user info */}
+              {/* src={users.avatar}  */}
+                <Avatar className="avatar-profile" alt="Alaa Jamal" src="/static/images/avatar/2.jpg" />
+              </IconButton>
+            </Tooltip>
+            <Menu
+              sx={{ mt: '45px' }}
+              id="menu-appbar"
+              anchorEl={anchorElUser}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={Boolean(anchorElUser)}
+              onClose={handleCloseUserMenu}
+            >
+              {/* {settings.map((setting) => (
+                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">{setting}</Typography>
+                </MenuItem>
+              ))} */}
+              <section className="section-profile">
+                <Button>
+                  <Link className="nav-profile" to ="/Profile">Profile</Link>
+                  </Button>
+                <Button>
+                <Link className="nav-profile" to ="/Profile">log out</Link>
+                </Button>
+              </section>
+            </Menu>
+          </Box>
+          ) : (
+         <section className="header-right">
             <button className="login-btn" onClick={handleLoginClick}>
               Login
             </button>
@@ -136,6 +189,15 @@ function NavBar() {
               SignUp
             </button>
           </section>
+      )}
+          {/* <section className="header-right">
+            <button className="login-btn" onClick={handleLoginClick}>
+              Login
+            </button>
+            <button className="signup-btn" onClick={handleSignClick}>
+              SignUp
+            </button>
+          </section> */}
         </Toolbar>
       </Container>
 

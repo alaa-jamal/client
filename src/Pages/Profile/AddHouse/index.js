@@ -69,6 +69,7 @@ const AddHouse = () => {
     setOpen(false);
 
     if (agree) {
+      handleClickOpen();
       setSnackbarOpen(true);
       setTitle("");
       setPrice("");
