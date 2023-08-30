@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogTitle from "@mui/material/DialogTitle";
@@ -114,6 +114,19 @@ const NewCard = ({ house }) => {
     setBathroomHouse(event.target.value);
   };
 
+  useEffect(() => {
+    setTitelHouse(title);
+    setDescriptionHouse(description);
+    setLocationHouse(city);
+    setTypeHouse(type);
+    setPriceHouse(price);
+    setBedroomHouse(bedroom);
+    setBathroomHouse(bathroom);
+  }, [title, description, city,
+    , type, price, bedroom, bathroom]);
+
+  
+
   return (
     <>
       <section className="myHouses">
@@ -212,7 +225,8 @@ const NewCard = ({ house }) => {
               label="Title"
               type="text"
               fullWidth
-              value={title}
+              value={titelHouse}
+              onChange={handleChangeTitle}
             />
 
             <TextField
@@ -222,7 +236,8 @@ const NewCard = ({ house }) => {
               multiline
               rows={4}
               fullWidth
-              value={description}
+              value={descriptionHouse}
+              onChange={handleChangeDescription}
             />
 
             <Box sx={{ minWidth: 120 }}>
@@ -231,7 +246,7 @@ const NewCard = ({ house }) => {
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
-                  value={city}
+                  value={locationHouse}
                   label="Location"
                   onChange={handleChangeLocation}
                 >
@@ -249,7 +264,7 @@ const NewCard = ({ house }) => {
                   <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    value={type}
+                    value={typeHouse}
                     label="For"
                     defaultValue={"Rent"}
                     onChange={handleChangeType}
@@ -267,7 +282,7 @@ const NewCard = ({ house }) => {
                 type="number"
                 defaultValue={"200$"}
                 sx={{ width: "120px" }}
-                value={price}
+                value={priceHouse}
                 onChange={handleChangePrice}
               />
             </section>
@@ -280,7 +295,7 @@ const NewCard = ({ house }) => {
                 type="number"
                 defaultValue={"3"}
                 sx={{ width: "120px" }}
-                value={bedroom}
+                value={bedroomHouse}
                 onChange={handleChangeBedroom}
               />
 
@@ -291,7 +306,7 @@ const NewCard = ({ house }) => {
                 type="number"
                 defaultValue={"1"}
                 sx={{ width: "120px" }}
-                value={bathroom}
+                value={bathroomHouse}
                 onChange={handleChangeBathroom}
               />
             </section>
