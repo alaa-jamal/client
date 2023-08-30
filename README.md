@@ -1,4 +1,4 @@
-# House Hunting Project 
+# House Hunting Project :house_with_garden:
 house-hunting  website that facilitates to access and rent available homes
 
 ## Live demo :tv: 
