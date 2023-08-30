@@ -120,6 +120,7 @@ const AddHouse = () => {
       .then((response) => response.json())
       .then((data) => {
         clear();
+        console.log("Success:", data);
         setSnackbarOpen(true);
         handleClose();
       })

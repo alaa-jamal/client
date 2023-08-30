@@ -20,7 +20,7 @@
 }
 
 .username-filed {
-  margin-bottom: 50px !important;
+  margin-bottom: 20px !important;
   background-color: #ffffff !important;
   height: 50px !important;
   border-radius: 50px !important;
@@ -69,4 +69,7 @@
 }
 .username-filed fieldset {
   display: none;
+}
+.username-filed{
+
 }

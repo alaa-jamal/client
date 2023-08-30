@@ -1,4 +1,4 @@
-import React, { useState ,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogTitle from "@mui/material/DialogTitle";
@@ -66,8 +66,6 @@ const NewCard = ({ house }) => {
     setOpenDialoge(true);
   };
 
-  
-
   const handleAgreeDelete = () => {
     setOpenDialoge(false);
     setOpenSnackbarDelete(true);
@@ -86,7 +84,6 @@ const NewCard = ({ house }) => {
     }
     setOpenSnackbarDelete(false);
   };
-
 
   const handleChangeTitle = (event) => {
     setTitelHouse(event.target.value);
@@ -122,10 +119,7 @@ const NewCard = ({ house }) => {
     setPriceHouse(price);
     setBedroomHouse(bedroom);
     setBathroomHouse(bathroom);
-  }, [title, description, city,
-    , type, price, bedroom, bathroom]);
-
-  
+  }, [title, description, city, , type, price, bedroom, bathroom]);
 
   return (
     <>

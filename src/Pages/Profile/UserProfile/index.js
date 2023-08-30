@@ -41,19 +41,19 @@ const UserProfile = () => {
     setSnackbarOpen(false);
   };
   const handleName = (e) => {
-    setName(e.target.value); 
+    setName(e.target.value);
   };
 
   const handlePassword = (e) => {
-    setPassword(e.target.value); 
+    setPassword(e.target.value);
   };
 
   const handleEmail = (e) => {
-    setEmail(e.target.value); 
+    setEmail(e.target.value);
   };
 
   const handlePhone = (e) => {
-    setPhone(e.target.value); 
+    setPhone(e.target.value);
   };
 
   useEffect(() => {
@@ -125,7 +125,6 @@ const UserProfile = () => {
             onChange={handlePhone}
           />
         </section>
-
         <section className="save-edit">
           <button className="save-edit-btn" onClick={handleOpen}>
             Save Edit
@@ -163,11 +162,10 @@ const UserProfile = () => {
               Update Successful!
             </MuiAlert>
           </Snackbar>
-        </section>      </section>
+        </section>{" "}
+      </section>
     </>
   );
 };
 
 export default UserProfile;
-
- 

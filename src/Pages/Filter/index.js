@@ -162,7 +162,11 @@ const Filter = () => {
           textAlign="center"
         >
           Houses Available : (
-          <span className="numOfHouse"> {filter.length} </span>)
+          <span className="numOfHouse">
+            {" "}
+            {filter.length === 0 ? "Not found " : filter.length}{" "}
+          </span>
+          )
         </Typography>
 
         <section className="data-filter-section">
