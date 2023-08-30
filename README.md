@@ -37,10 +37,10 @@ Create an application that displays many homes to make it easier for the user to
 - ReactJS (Hooks).
 - Material UI
 
-## team
+
 
 ### Lead Mentor :sunglasses:
 Yasmeen Attallah 
 
-
+## By:
 Alaa Al-Hamami
