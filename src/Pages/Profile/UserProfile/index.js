@@ -70,7 +70,7 @@ const UserProfile = () => {
       }
     }
     getUserData();
-  },[user]);
+  },);
 
   return (
     <>
